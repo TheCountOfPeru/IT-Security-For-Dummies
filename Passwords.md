@@ -12,20 +12,52 @@ Passwords are good because they are easy to remember and it is very commonly use
 Passwords are bad because a lot of people do not use strong passwords or they re use passwords. When it comes to making passwords most people aren't good at it. Also it can be easy to steal a password from keyloggers or even looking over a person's shoulder.
 
 ## Guidelines for password use
-These guidelines are from NIST and are useful for users and administrators of any place requiring passwords. Some guidelines come with an in depth explanation.
+These guidelines are from NIST and are useful for users and administrators of any place requiring passwords. Some guidelines come with an in depth explanation. You can compare your favourite websites to see how secure they are with passwords.
 
 ### NIST 2019 Password Guidelines
 1. No complexity requirements. 
-   1. People forced to follow complexity requirements follow those requirements in predictable ways. Which makes them easier to guess.
-   2. People will follow the requirements but have a hard time remembering a complex password. So they will simply append the requirements to a simple password. Which makes them easier to guess
+   * People forced to follow complexity requirements follow those requirements in predictable ways. Which makes them easier to guess.
+   * People will follow the requirements but have a hard time remembering a complex password. So they will simply append the requirements to a simple password. Which makes them easier to guess
 2. At least 8 (sometimes 6) characters.
-   1. With 8 characters you can have 6,095,689,385,410,816 different passwords. Not having enough characters is bad for password security.
+   * With 8 characters you can have 6,095,689,385,410,816 different passwords. Not having enough characters is bad for password security.
 3. Support at least 64 characters.
-   1. Allowing for extremely long passwords makes them better and harder to guess.
-   2. Passwords should not be stored as what they were entered anyways so limiting the number of characters is bad practice. 
+   * Allowing for extremely long passwords makes them better and harder to guess.
+   * Passwords should not be stored as what they were entered anyways so limiting the number of characters is bad practice. 
 4. Allow any character.
-   1. Unicode should be normalized with NKFC of NFKD.
-   2. If SQL injection can be done by entering passwords you have bigger problems.
+   * Unicode should be normalized with NKFC of NFKD.
+   * If SQL injection can be done by entering passwords you have bigger problems.
 5. Blacklist frequently used passwords.
-   1. Any passwords from: a dictionary, list of common/bad passwords, passwords found in past database breaches, and context-specific words (name of service, the username, etc) should not be used again. It's important to explain to the user how to make a better password after rejection.
-6. 
+   * Any passwords from: a dictionary, list of common/bad passwords, passwords found in past database breaches, and context-specific words (name of service, the username, etc) should not be used again. It's important to explain to the user how to make a better password after rejection.
+6. Do not allow password hints or security questions.
+   * If a database with passwords and their hints/security questions leaked those pieces of information can help hackers guess passwords. 
+   * Answers to security questions aren't well kept secrets anyways.
+7. Do not require users to change their password frequently
+   * Forcing users to do this leads to them creating weak passwords that are usually easy to remember since they are forced to change them too often.
+   * Makes users fail to login more results in hiding when a hacker is attempting to login.
+8. Let people copy and paste their password.
+   * This stops people who look over the users shoulder or keyloggers.
+   * This makes it easier to use complicated passwords.
+9. Use two/multi-factor authentication.
+   * Helps increase security for your users even if they re-use passwords.
+   * Helps defeat phishing attacks becuase a hacker would also need to defeat more than just a password.
+10. Allow at least 10 passwords attempts before refusing anymore. 
+    * The weakest passwords can be brute-forced in less than 10 attempts.
+    * Limits the amount of times regular uses lock themselves out of the system. Just the right amount.
+
+## Storing Passwords
+The ways to store a password range from the very weak to the extremely strong. The techniques used to store passwords are important to know because they are for when a system needs to defend itself agaist those trying to access user accounts. Here is a list of techniques from weakest to strongest with short descriptions. More in depth explanations will be gone over after this list.
+* Store as plaintext
+  * Store passwords as is. If a hacker somehow gets access to the password database all accounts are compromised. Never store passwords this way.
+* Store encrypted passwords
+  * Encrypt all passwords before storing. A hacker can compromise accounts of they can steal the encryption key and get access to the password database. Never store passwords this way.
+* Store hashed passwords
+  * Hash passwords before storing. A hacker with access to the database can reverse the hashes and maybe able to uncover passwords. Not reccommended to store passwords this way.
+* Store hashed & salted passwords
+  * By appending a salt to a password before hashing makes it very strong. 
+* Store hashed, salted & peppered passwords
+  * By appending the pepper and salt to a password before hashing makes it extremely strong.
+
+### What is encryption, hashing, salting and peppering?
+These four words may not be familiar to you in the context of paswords so we will explain them all.
+
+#### Encryption 
