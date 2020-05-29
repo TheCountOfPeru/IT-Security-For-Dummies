@@ -1,7 +1,7 @@
 # Passwords
 Authetication is a important of part IT security and privacy. It is the process of proving who you say you are. Passwords are often used alongside a username to authenticate users with a website.
 
-This article will be examining how passwords work, how useful they are, guidelines for their use, and how to store passwords
+This article will be examining how passwords work, how useful they are, guidelines for their use, and how to store passwords.
 
 ## How do passwords work?
 When you login into a website with your username and password the website looks into it's database. If your username matches the information within the database then the website lets you in. 
@@ -61,3 +61,27 @@ The ways to store a password range from the very weak to the extremely strong. T
 These four words may not be familiar to you in the context of paswords so we will explain them all.
 
 #### Encryption 
+Encryption can be thought of as locks and keys. For example of Alice wants to give something to Bob and make so nobody can see what Bob got. She can put her item in a box and lock it. That would be encryption. Bob would recieve it and unlock it. That is decryption. 
+
+Now in the context of passwords: to encrypt a password you need a key. The key would be a string of characters like PW9sFEHglF. Then what you use to lock the password would be your encryption method. When you encrypt a password you are in the simplest terms scrambling it based on what key and encryption method you use. Anyone who sees the encryption will not be able to turn it back into a password without a key.
+
+So for password databases using encryption the encrypted passwords are stored. When someone wants to login the server takes the password and encrypts it. If the encryption matches one in the database the user is let in. This means the key must be protected carefully. 
+
+So if the hackers obtain the key and the database then all passwords are compromised.
+
+#### Hashing
+Hashing is similar to encryption except when you scramble the password there is no key. That is to say when you hash something you are not supposed be able to undo the hashing. 
+
+So a database will store the hash. Every time someone trys to login the password they input is hashed. If it matches one in the database they are let it.
+
+This makes it a bit harder for hackers to steal passwords if they have access to the database. So to break in hackers can use what is called a hash table to help themselves. A hash table just lists passwords and their corresponding hashes. So they can go backwards from hash to passwords and could access some accounts in the database. These hash tables are ever growing things that live forever on the internet.
+
+##### Salting
+Salting is a technique to strengthen hashing. The idea is before hashing a random string is generated (the salt) and appeneded to the password then it is hashed. In the database the salt is stored for future retrieval. When a user logins their salt is located in the database and appended to the password and hashed again. If the hash matches what is in the database the user is let it. 
+
+This makes it extremely difficult for hackers to steal passwords from a database. Since now their hash table is rendered useless due to the salt. Trying to make a hash table to include a salt could take an extremely long time. As long as the passwords people use are not easily guessable all accounts are safe.
+
+##### Peppering
+Peppering is supposed to be used in conjuction with salting. It is string that would be included with the server but not kept in a database or anything like that. You would append it with the salt and password and hash like normal. Except the pepper is secret. So now even if a hacker obtained the database they chance they would be able to reverse any hash would be very low or take an immeasurable amount of time to guess. Having a strong password is still a good idea of course.
+
+In conclusion if you make a website with user accounts you should at least salt your passwords. Anything less is a terrible idea.
