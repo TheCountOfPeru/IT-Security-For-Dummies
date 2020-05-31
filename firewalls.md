@@ -1,6 +1,17 @@
 
 Briefing on firewalls
 
+## Quick view:
+
+main points:
+
+•	A firewall is a hardware or software system that prevents unauthorized access to or from a network.
+
+•	Two main types of firewalls: network layer and application layer
+
+•	Network layer firewalls make decisions based on the source address, destination address and ports in individual IP packets.
+
+•	Application layer firewalls generally are hosts running proxy servers, which permit no traffic directly between networks and perform elaborate logging and examination of traffic.
 
 ## Introduction
 
@@ -37,15 +48,5 @@ An application layer firewall may influence performance and may make the firewal
 The future of firewalls in everyday use sits somewhere between both network layer firewalls and application layer firewalls. It is likely that network layer firewalls will become increasingly aware of the information going through them, and application layer firewalls will become more and more transparent. The end result will be kind of a fast packet-screening system that logs and checks data as it passes through.
 
 
-## Quick view:
 
-main points:
-
-•	A firewall is a hardware or software system that prevents unauthorized access to or from a network.
-
-•	Two main types of firewalls: network layer and application layer
-
-•	Network layer firewalls make decisions based on the source address, destination address and ports in individual IP packets.
-
-•	Application layer firewalls generally are hosts running proxy servers, which permit no traffic directly between networks and perform elaborate logging and examination of traffic.
 
