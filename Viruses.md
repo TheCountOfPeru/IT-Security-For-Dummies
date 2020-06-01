@@ -48,4 +48,4 @@ Many people choose to invest in fancy antivirus software and pay a monthly fee t
 * Don't make risky downloads
 * Don't open those scam emails, **especially the attachments**
 * If you have a windows system, keep up to date on windows-defender updates 
-* Keep your [firewall](./firewalls) up
+* Keep your [firewall](./firewalls.md) up
