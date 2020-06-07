@@ -13,6 +13,6 @@ TLS used be what was called SSL or Secure Sockets Layer. This protocol guarantee
 ### TLS handshake protocol
 The handshake is meant to authenticate a server with a client i.e. your internet browser. With HTTPS your browser initiates a handshake when connecting to a website. For this article we will be looking that handshake of TLS 1.2 and TLS 1.3. 1.3 fixes some problems with 1.2. The 1.3 handshake is more secure and faster then 1.2
 
-
+![tls handshake](https://github.com/TheCountOfPeru/IT-Security-For-Dummies/blob/master/images/tls12vstls13.png)
 
 
