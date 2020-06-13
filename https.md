@@ -63,8 +63,8 @@ A common attack is the where the attack is sitting between the messages of the c
 Now the client has a HTTP connection to the attacker even though it thinks it has connection with the server. And the server thinks it has a HTTPS connection to the client.
 
 There are two solutions to beat this.
-1. Force your browser to only use HTTPS.
-2. Have a server implement HSTS or HTTP Strict Transport policy. This adds a header to all server replies saying that this page should only be accessed by HTTPS. A browser would see that and refuse to display the requested page.
+1. Force your browser to only use HTTPS. For example installing the HTTPS Everyone browser extension available for Chrome, Firefox, and Opera.
+2. Have a server implement HSTS or HTTP Strict Transport policy. This adds a header to all server replies saying that this page should only be accessed by HTTPS. A browser would see that and refuse to display the requested page if on a HTTP connection.
 
 ## Further topics for reading
 * certificates 
