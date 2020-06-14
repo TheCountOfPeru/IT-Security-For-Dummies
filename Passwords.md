@@ -1,4 +1,4 @@
-[[Back]](./README.md)
+[Back](./README.md)
 # Passwords
 Authetication is a important of part IT security and privacy. It is the process of proving who you say you are. Passwords are often used alongside a username to authenticate users with a website.
 
