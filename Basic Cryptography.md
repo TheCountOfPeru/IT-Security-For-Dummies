@@ -1,25 +1,33 @@
-
-=======
 #### [Back](./README.md)
 
-Cryptography is the branch of science concerned with keeping secrets secret.
+## Cryptography
 
-* The message that is to be transmitted is called plaintext which will be referred to as "m". It may be in the form of text, digit, executable program or any other type. [[1]](https://ucalgary-primo.hosted.exlibrisgroup.com/primo-explore/fulldisplay?docid=01UCALG_ALMA51645328230004336&context=L&vid=UCALGARY&lang=en_US&search_scope=ONLINE_ONLY&adaptor=Local%20Search%20Engine&isFrbr=true&tab=everything&query=any,contains,basic%20cryptography&offset=0)
+Cryptography is the branch of science concerned with keeping secrets secret. Cryptography provides secure communication in the presence of third parties trying to access it. 
 
-* The key will be referred as "k"
+* The message that is to be transmitted is called plaintext which will be referred to as "m". It may be in the form of text, digit, executable program or any other type. This is what we wish to protect from others accessing it. [[1]](https://ucalgary-primo.hosted.exlibrisgroup.com/primo-explore/fulldisplay?docid=01UCALG_ALMA51645328230004336&context=L&vid=UCALGARY&lang=en_US&search_scope=ONLINE_ONLY&adaptor=Local%20Search%20Engine&isFrbr=true&tab=everything&query=any,contains,basic%20cryptography&offset=0)
+
+* The key will be referred as "k". It will be used to encrypt the plaintext.
 * Ciphertext which is the result of the plaintext being encrypted will be referred as "c"
 
 ## Symmetric-Key Encryption
 Symmetric encryption means that one key will be used for both encrypting and decrypting. Alice and Bob first agree on a key k. They both keep this key secret.
+
+
 1. Alice encrypts message "m" by using an algorithm E as well as the key. This creates ciphertext "c". 
 2. Bob uses decrypting algorithm D along with key k to obtain message "m".
+
+There are two notions to go about encrypting the plaintext in symmetric-key encryption. One is the notion of **stream cipher** which processes character by character. The other is **block cipher** which converts plaintext into ciphertext by splitting the plaintext into blocks first.
 
 A basic problem in a symmetric scheme is how Alice and Bob can agree on a shared secret key k in a secure and efficient way. 
 There were no solutions to the key exchange problem until public-key cryptography was discovered 44 years ago by Martin Hellman, Ralph Merkle and Whitfield Diffie.
 
-Some examples of symmetric-key encryption algorithms:
+Some examples of symmetric-key encryption algorithms are:
+* Vernam's one-time pad
+* DES
+* AES
+
 ### Vernam's one-time pad
- Encryption is achieved by performing a bitwise XOR between m and k. Decryption is achieved by bitwise XOR between k and c.
+ Encryption is achieved by performing a bitwise exclusive or (XOR) between m and k. Decryption is achieved by bitwise XOR between k and c.
  Four criteria that must be met for the encryption to work:
  1. The Key must be random
  2. The Key must be as long as the plaintext
@@ -30,7 +38,8 @@ Some of the disadvantages are seen from the requirements, mainly having to creat
 The Vernam one-time pad ensures the confidentiality but fails to protect the message against modification.
 ### DES
 * Stands for Data Encryption Standard
-* The DES algorithm takes 56-bit keys and 64-bit plaintext messages to output a 64-bit cryptogram. 
+* The DES algorithm takes 56-bit keys
+* It takes 64-bit plaintext messages to output a 64-bit cryptogram. 
 * The main disadvantage of DES is that it can be broken using brute-force search.  
     
 ### AES
