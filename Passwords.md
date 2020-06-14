@@ -9,7 +9,7 @@ This article will be examining how passwords work, how useful they are, guidelin
 When you login into a website with your username and password the website looks into it's database. If your username and password matches the information within the database then the website lets you in. 
 
 ## Why are passwords useful?
-Passwords are good because they are easy to remember and it is very commonly used with all types of services. 
+Passwords are good because they are easy to remember and very commonly used with all types of services. 
 
 Passwords are bad because a lot of people do not use strong passwords or they reuse passwords. When it comes to making passwords most people aren't good at it. Also it can be easy to steal a password from keyloggers or even looking over a person's shoulder.
 
