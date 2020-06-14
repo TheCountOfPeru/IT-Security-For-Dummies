@@ -1,4 +1,4 @@
-#### [Back](./README.md)
+#### [Back to table of contents](./README.md)
 
 # Browsing the internet securely: HTTP, HTTPS and TLS 
 
