@@ -1,3 +1,5 @@
+#### [Back](./README.md)
+
 # Passwords
 Authetication is a important of part IT security and privacy. It is the process of proving who you say you are. Passwords are often used alongside a username to authenticate users with a website.
 
@@ -12,7 +14,7 @@ Passwords are good because they are easy to remember and it is very commonly use
 Passwords are bad because a lot of people do not use strong passwords or they reuse passwords. When it comes to making passwords most people aren't good at it. Also it can be easy to steal a password from keyloggers or even looking over a person's shoulder.
 
 ## Guidelines for password use
-These guidelines are from NIST and are useful for users and administrators of any place requiring passwords. Some guidelines come with an in depth explanation. You can compare your favourite websites to see how secure they are with passwords.
+These guidelines are from NIST and are useful for users and administrators of any place requiring passwords. Some guidelines come with an in depth explanation. You can compare these to your favourite websites to see how secure they are with passwords.
 
 ### NIST 2019 Password Guidelines
 1. No complexity requirements. 
@@ -45,11 +47,11 @@ These guidelines are from NIST and are useful for users and administrators of an
     * Limits the amount of times regular uses lock themselves out of the system. Just the right amount.
 
 ## Storing Passwords
-The ways to store a password range from the very weak to the extremely strong. The techniques used to store passwords are important to know because they are for when a system needs to defend itself agaist those trying to access user accounts. Here is a list of techniques from weakest to strongest with short descriptions. More in depth explanations will be gone over after this list.
+The ways to store a password range from the very weak to the extremely strong. The techniques used to store passwords are important to know because they are for when a system needs to defend itself agaist those trying to access user accounts. Here is a list of techniques from weakest to strongest.
 * Store as plaintext
   * Store passwords as is. If a hacker somehow gets access to the password database all accounts are compromised. Never store passwords this way.
-* Store encrypted passwords
-  * Encrypt all passwords before storing. A hacker can compromise accounts of they can steal the encryption key and get access to the password database. Never store passwords this way.
+* Encrypt the database
+  * A hacker can compromise accounts of they can steal the encryption key and get access to the password database. Never store passwords this way.
 * Store hashed passwords
   * Hash passwords before storing. A hacker with access to the database can reverse the hashes and maybe able to uncover passwords. Not reccommended to store passwords this way.
 * Store hashed & salted passwords
@@ -57,24 +59,21 @@ The ways to store a password range from the very weak to the extremely strong. T
 * Store hashed, salted & peppered passwords
   * By appending the pepper and salt to a password before hashing makes it extremely strong.
 
-### What is encryption, hashing, salting and peppering?
-These four words may not be familiar to you in the context of paswords so we will explain them all.
+## What is encryption, hashing, salting and peppering?
 
 #### Encryption 
-Encryption can be thought of as locks and keys. For example of Alice wants to give something to Bob and make so nobody can see what Bob got. She can put her item in a box and lock it. That would be encryption. Bob would recieve it and unlock it. That is decryption. 
+Encryption can be thought of as locks and keys. For example of Alice wants to give something to Bob and make sure nobody else can see what Bob got. She can put her item in a box and lock it. That would be encryption. Bob would recieve it and unlock it. That is decryption. 
 
-Now in the context of passwords: to encrypt a password you need a key. The key would be a string of characters like PW9sFEHglF. Then what you use to lock the password would be your encryption method. When you encrypt a password you are in the simplest terms scrambling it based on what key and encryption method you use. Anyone who sees the encryption will not be able to turn it back into a password without a key.
+In reality the key would be a string of characters like "9jpivs#" and encryption would be using that key to scramble whatever data you want to protect. So looking at encrypted data would not reveal anything of the actual data.
 
-So for password databases using encryption the encrypted passwords are stored. When someone wants to login the server takes the password and encrypts it. If the encryption matches one in the database the user is let in. This means the key must be protected carefully. 
-
-So if the hackers obtain the key and the database then all passwords are compromised.
+So if the hackers obtain the key and the database then all accounts are compromised.
 
 #### Hashing
-Hashing is similar to encryption except when you scramble the password there is no key. That is to say when you hash something you are not supposed be able to undo the hashing. 
+Hashing is similar to encryption except when you scramble the data there is no you can undo it. It's a one way operation.
 
-So a database will store the hash. Every time someone trys to login the password they input is hashed. If it matches one in the database they are let it.
+So a database will store the hashed password. Every time someone trys to login the password they input is hashed. If it matches one in the database they are let it.
 
-This makes it a bit harder for hackers to steal passwords if they have access to the database. So to break in hackers can use what is called a hash table to help themselves. A hash table just lists passwords and their corresponding hashes. So they can go backwards from hash to passwords and could access some accounts in the database. These hash tables are ever growing things that live forever on the internet.
+This makes it a bit harder for hackers to steal passwords if they have access to the database. So to break in hackers can use what is called a hash table to help themselves. A hash table just lists passwords and their corresponding hashes. So they can go backwards from hash to passwords and could access some accounts in the database. These hash tables are ever growing things that live that can be found leaked on the internet.
 
 ##### Salting
 Salting is a technique to strengthen hashing. The idea is before hashing a random string is generated (the salt) and appeneded to the password then it is hashed. In the database the salt is stored for future retrieval. When a user logins their salt is located in the database and appended to the password and hashed again. If the hash matches what is in the database the user is let it. 
@@ -85,3 +84,6 @@ This makes it extremely difficult for hackers to steal passwords from a database
 Peppering is supposed to be used in conjuction with salting. It is string that would be included with the server but not kept in a database or anything like that. You would append it with the salt and password and hash like normal. Except the pepper is secret. So now even if a hacker obtained the database they chance they would be able to reverse any hash would be very low or take an immeasurable amount of time to guess. Having a strong password is still a good idea of course.
 
 In conclusion if you make a website with user accounts you should at least salt your passwords. Anything less is a terrible idea.
+
+## Password Tips
+As strong passwords are annoying to make and remember a good solution is a password manager. A password manager can generate strong passwords and remembers them all for you. Of course a downside is the password manager is the single point of failure if it is compromised.
