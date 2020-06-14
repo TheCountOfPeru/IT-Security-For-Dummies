@@ -8,7 +8,7 @@ There is no doubt that you are aware of what viruses are if you've ever used a c
 There are two keys ways for a piece of malware to infect your computer.
 1. ### Tricking you
     You must take some sort of action for the malware to be downloaded or executed on your device. For example, you may view a webpage with malicious code, or insert a USB drive, or open some shady email attachment. Malware is infamous for social engineering and tricking people into downloading it. In a more recent example, a malware going by the very original name, COVID-19 Malware, involves a file called 'covid19.exe' which curious users may download, only to have their computer's master boot record altered and their device rendered un-startable.
-    ![1](https://zdnet3.cbsistatic.com/hub/i/r/2020/04/02/305b656b-d1b6-444e-a5f8-04677c740e79/resize/1200x900/9922c06e2328e860369860a7bc86c213/coronaimage.png)
+    ![1](./images/coronaimage.png)
 
 1. ### Software flaws
     Secondly, by exploiting some sort of flaw in existing software. This is something which you will have to worry less about, as long as you are keeping up with your updates, it is not something you can do much about. Sometimes software just has flaws, and people find ways to break in. As long as you're not using outdated or unreliable software, you should be safe from this for the most part, or at least as safe as you can be.
@@ -19,7 +19,7 @@ There are two keys ways for a piece of malware to infect your computer.
 1. ### Worms
     * A self-spreading malware with no user involvement may spread via email, private networks, or public internet access
     
-    ![1](https://i0.wp.com/www.nicholaspyers.com/wp-content/uploads/iloveyou.gif?resize=350%2C262&ssl=1)
+    ![1](./images/iloveyou.gif)
 
 1. ### Trojans
     * Malware built into a program, fooling users into thinking its harmless, until they download it. 
@@ -36,7 +36,7 @@ There are two keys ways for a piece of malware to infect your computer.
 1. ### Downloader
     * A Dropper that downloads its malware from the internet
 1. ### Ransomware
-    * Malware that demands a ransom from users in exchange for them regaining access to their devices![1](https://d3i6fh83elv35t.cloudfront.net/newshour/app/uploads/2017/05/RTX35YNS-1024x765.jpg)
+    * Malware that demands a ransom from users in exchange for them regaining access to their devices![1](./images/RTX35YNS-1024x765.jpg)
 1. ### Keylogger
     * A silent malware that records keystrokes on a device and sends the information off to a third party
 1. ### Scareware
