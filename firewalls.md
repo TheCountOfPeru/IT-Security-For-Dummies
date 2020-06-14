@@ -13,6 +13,8 @@ Firewalls is important also because it provides its users with an important logg
 
 
 
+## Categorization 
+
 In general, there are two types of firewalls:
 
 
