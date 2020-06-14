@@ -25,7 +25,7 @@ In general, there are two types of firewalls:
 The difference is very subtle. The categorization depends on what mechanisms the firewall uses to go through from one protected network to another. The International Standards Organization (ISO) Open Systems Interconnect (OSI) model for networking defines seven levels, where each level provides services that higher levels depend on. It’s important to bear in mind that the lower-level the mechanism, the less secure the firewall is.
 
 
-(http://www.expertsmind.com/CMSImages/255_Application%20Gateways%20-firewall.png)
+![PIC](http://www.expertsmind.com/CMSImages/255_Application%20Gateways%20-firewall.png)
 
 
 ## Network layer firewalls
