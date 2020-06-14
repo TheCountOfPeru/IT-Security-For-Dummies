@@ -11,7 +11,7 @@ main points:
 
 •	Network layer firewalls make decisions based on the source address, destination address and ports in individual IP packets.
 
-•	Application layer firewalls generally are hosts running proxy servers, which permit no traffic directly between networks and perform elaborate logging and examination of traffic.
+•	Application layer firewalls generally are hosts running proxy servers, which permit no traffic directly between networks and perform elaborate logging and examination of traffic.(Cited from [Wikipedia](https://en.wikipedia.org/wiki/Firewall_(computing)))
 
 ## Introduction
 
