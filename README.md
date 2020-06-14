@@ -12,7 +12,7 @@ Table of Contents
 
 * [Passwords](https://github.com/TheCountOfPeru/IT-Security-For-Dummies/blob/master/Passwords.md)
 
-* [Malware](https://github.com/TheCountOfPeru/IT-Security-For-Dummies/blob/master/Viruses.md)
+* [Malware](https://github.com/TheCountOfPeru/IT-Security-For-Dummies/blob/master/Malware.md)
 
 * [Firewall](https://github.com/TheCountOfPeru/IT-Security-For-Dummies/blob/master/firewalls.md)
 
