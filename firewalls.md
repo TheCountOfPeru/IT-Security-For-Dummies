@@ -51,5 +51,5 @@ The future of firewalls in everyday use sits somewhere between both network laye
 
 ## Bibliography
 
-[[1]](http://mercury.webster.edu/aleshunas/COSC%205130/Chapter-22.pdf)
+[1][Mercury Webster Education on Firewalls](http://mercury.webster.edu/aleshunas/COSC%205130/Chapter-22.pdf)
 
