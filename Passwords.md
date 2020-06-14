@@ -1,7 +1,7 @@
 #### [Back](./README.md)
 
 # Passwords
-Authetication is an important part of IT security and privacy. It is the process of proving who you say you are. Passwords are often used alongside a username to authenticate users with a website.
+Authentication is an important part of IT security and privacy. It is the process of proving who you say you are. Passwords are often used alongside a username to authenticate users with a website.
 
 This article will be examining how passwords work, how useful they are, guidelines for their use, and how to store passwords.
 
