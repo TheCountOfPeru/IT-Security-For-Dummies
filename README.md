@@ -1,8 +1,6 @@
 # IT-Security-For-Dummies
 
-The purpose of the handbook will be to inform readers on security and privacy topics related to computing and being on the internet. With the objective to make them aware of threats and suggestions to better protect themselves. The target audience is people who have no prior knowledge of security and privacy.
-
-We think a handbook is a useful idea for the reason that it makes it easy for users to find and read about important security topics, and it is more reachable than several other forms of media, and traditionally users are extremely unaware of the risks associated with their computers.
+The purpose of this handbook is to inform readers on security and privacy topics related to computing and the internet. After reading through this handbook readers will be aware of threats and suggestions to better protect themselves. The target audience is people who have no prior knowledge of security and privacy.
 
 Table of Contents
 * [Basic Cryptography](https://github.com/TheCountOfPeru/IT-Security-For-Dummies/blob/master/Basic%20Cryptography.md)
