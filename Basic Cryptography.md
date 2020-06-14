@@ -1,4 +1,6 @@
-Cryptography is the branch of science concerned with keeping secrets secret.
+## Cryptography
+
+"Cryptography is the branch of science concerned with keeping secrets secret."[1]
 
 * The message that is to be transmitted is called plaintext which will be referred to as "m". It may be in the form of text, digit, executable program or any other type. [[1]](https://ucalgary-primo.hosted.exlibrisgroup.com/primo-explore/fulldisplay?docid=01UCALG_ALMA51645328230004336&context=L&vid=UCALGARY&lang=en_US&search_scope=ONLINE_ONLY&adaptor=Local%20Search%20Engine&isFrbr=true&tab=everything&query=any,contains,basic%20cryptography&offset=0)
 
@@ -25,12 +27,27 @@ Some examples of symmetric-key encryption algorithms:
 Some of the disadvantages are seen from the requirements, mainly having to create a random key and that it must be the length of "m". 
 The Vernam one-time pad ensures the confidentiality but fails to protect the message against modification.
 ### DES
- The DES algorithm takes 56-bit keys and 64-bit plaintext messages to output a 64-bit cryptogram. 
+* Stands for Data Encryption Standard
+* The DES algorithm takes 56-bit keys and 64-bit plaintext messages to output a 64-bit cryptogram. 
+* The main disadvantage of DES is that it can be broken using brute-force search.  
     
 ### AES
 * Stands for Advanced Encryption Standard
 * Developed by J.Daeman and V.Rijmen. 
 * AES fixes block length to 128 bits, and uses three key lengths 128, 192 and 256 bits.
 
+## What is Asymmetric cryptography ?
+It is a type of cryptography that uses keys. All users get two keys:
+
+* One public key
+* One private key
+
+Users exchange their public keys to communicate with each other. Any user can encrypt a message as long as they have the receiver's public key. The message however, can only be decrypted by the receiver's private key. The blockchain uses asymmetric cryptography to achieve two goals:
+
+* Identifying accounts (public keys)
+* Authorizing transactions
+
+In Symmetric cryptography, only one key is used to both encrypt and decrypt.
+
 ## Bibliography
-1. Hans Delfs and Helmut Knebl. 2007. Introduction to Cryptography Principles and Applications. Second Edition. Berlin, Heidelberg: Springer.
+[[1.]](https://ucalgary-primo.hosted.exlibrisgroup.com/primo-explore/fulldisplay?docid=01UCALG_ALMA51645328230004336&context=L&vid=UCALGARY&lang=en_US&search_scope=ONLINE_ONLY&adaptor=Local%20Search%20Engine&isFrbr=true&tab=everything&query=any,contains,basic%20cryptography&offset=0)Hans Delfs and Helmut Knebl. 2007. Introduction to Cryptography Principles and Applications. Second Edition. Berlin, Heidelberg: Springer.
