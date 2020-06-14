@@ -49,5 +49,7 @@ An application layer firewall may influence performance and may make the firewal
 The future of firewalls in everyday use sits somewhere between both network layer firewalls and application layer firewalls. It is likely that network layer firewalls will become increasingly aware of the information going through them, and application layer firewalls will become more and more transparent. The end result will be kind of a fast packet-screening system that logs and checks data as it passes through.
 
 
+## Bibliography
 
+[[1]](http://mercury.webster.edu/aleshunas/COSC%205130/Chapter-22.pdf}
 
