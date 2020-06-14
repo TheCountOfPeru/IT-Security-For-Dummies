@@ -1,3 +1,4 @@
+[[Back]](./README.md)
 Cryptography is the branch of science concerned with keeping secrets secret.
 
 * The message that is to be transmitted is called plaintext which will be referred to as "m". It may be in the form of text, digit, executable program or any other type. [[1]](https://ucalgary-primo.hosted.exlibrisgroup.com/primo-explore/fulldisplay?docid=01UCALG_ALMA51645328230004336&context=L&vid=UCALGARY&lang=en_US&search_scope=ONLINE_ONLY&adaptor=Local%20Search%20Engine&isFrbr=true&tab=everything&query=any,contains,basic%20cryptography&offset=0)
