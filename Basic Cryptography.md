@@ -12,11 +12,10 @@ Cryptography is the branch of science concerned with keeping secrets secret. Cry
 ## Symmetric-Key Encryption
 Symmetric encryption means that one key will be used for both encrypting and decrypting. Alice and Bob first agree on a key k. They both keep this key secret.
 
-
 1. Alice encrypts message "m" by using an algorithm E as well as the key. This creates ciphertext "c". 
 2. Bob uses decrypting algorithm D along with key k to obtain message "m".
 
-There are two notions to go about encrypting the plaintext in symmetric-key encryption. One is the notion of **stream cipher** which processes character by character. The other is **block cipher** which converts plaintext into ciphertext by splitting the plaintext into blocks first.
+There are two notions to go about encrypting the plaintext in symmetric-key encryption. One is the notion of **stream cipher** which processes the plaintext bit by bit. The other is **block cipher** which converts plaintext into ciphertext by splitting the plaintext into blocks first, the size of the block could vary by algorithm, the DES algorithm splits it into 8 bytes (64 bits).
 
 A basic problem in a symmetric scheme is how Alice and Bob can agree on a shared secret key k in a secure and efficient way. 
 There were no solutions to the key exchange problem until public-key cryptography was discovered 44 years ago by Martin Hellman, Ralph Merkle and Whitfield Diffie.
@@ -27,7 +26,7 @@ Some examples of symmetric-key encryption algorithms are:
 * AES
 
 ### Vernam's one-time pad
- Encryption is achieved by performing a bitwise exclusive or (XOR) between m and k. Decryption is achieved by bitwise XOR between k and c.
+ This is the most famous example of a stream cipher. Encryption is achieved by performing a bitwise exclusive or (XOR) between m and k. Decryption is achieved by bitwise XOR between k and c.
  Four criteria that must be met for the encryption to work:
  1. The Key must be random
  2. The Key must be as long as the plaintext
@@ -37,10 +36,19 @@ Some examples of symmetric-key encryption algorithms are:
 Some of the disadvantages are seen from the requirements, mainly having to create a random key and that it must be the length of "m". 
 The Vernam one-time pad ensures the confidentiality but fails to protect the message against modification.
 ### DES
-* Stands for Data Encryption Standard
-* The DES algorithm takes 56-bit keys
-* It takes 64-bit plaintext messages to output a 64-bit cryptogram. 
-* The main disadvantage of DES is that it can be broken using brute-force search.  
+A block cipher that stands for **Data Encryption Standard** which was proposed by IBM back in 1974.
+
+* The DES algorithm takes 56-bit keys. The keys are apparently each 64 bits long **but** every 8th key bit is ignored in the DES algorithm. Thus effectively "k" is 56 bits 
+* It takes 64-bit plaintext messages
+* It outputs a 64-bit cryptogram. 
+
+The encryption with DES starts by taking the key and permutating the bits. 
+
+![DES Initial Permutation](https://github.com/TheCountOfPeru/IT-Security-For-Dummies/blob/master/images/Initial-Permutation.png)
+
+An encryption with DES consists of **16** major steps, called rounds. In all of the 16 rounds, a 48-bit round key "ki" is used. The 16 round keys are actually computed from the 56-bit key "k" by using another algorithm.
+
+The main disadvantage of DES is that it can be broken using brute-force search. However, 3DES, which applies the DES algorithm 3 times is considered secure. 
     
 ### AES
 * Stands for Advanced Encryption Standard

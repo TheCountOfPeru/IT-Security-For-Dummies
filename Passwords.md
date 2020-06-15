@@ -1,5 +1,3 @@
-#### [Back to table of contents](./README.md)
-
 # Passwords
 Authentication is important for IT security and privacy. It is the process of proving who you say you are. Passwords are often used alongside a username to authenticate users with a website.
 
@@ -66,7 +64,7 @@ Encryption can be thought of as locks and keys. For example, Alice wants to give
 
 In reality, the key would be a string of characters like "9jpivs#" and encryption would be using that key to scramble whatever data you want to protect. So looking at encrypted data would not reveal anything of the actual data.
 
-So if the hackers obtain the key and the database then all accounts are compromised.
+So if the hackers obtain the key and the database then all passwords are compromised.
 
 #### Hashing
 Hashing is similar to encryption except when you scramble the data there is no you can undo it. It's a one-way operation.
