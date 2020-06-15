@@ -7,17 +7,21 @@
 
 ## Why should I care?
 
-There is a huge potential for cost cutting by getting rid of middlemen in different industries. This would lead to lower prices for us as consumers as well as higher efficiencies overall.
-* Blockchain has the potential to disrupt traditional financial institutions. Transaction fees to transfer money between countries would be much lower.
+There is a huge potential for cost cutting by getting rid of middlemen (intermediaries) in different industries. This would lead to lower prices for us as consumers as well as higher efficiencies overall.
+* Blockchain has the potential to disrupt traditional financial institutions.
+    * Transaction fees to transfer money between countries would be much lower and quicker.
+
 ![Bitcoin](https://static.coindesk.com/wp-content/uploads/2018/11/dark-bitcoin-710x458.jpg?format=webp)
 * It could be used as the backbone for a new voting system
 * It is a perfect tool for keeping records of ownership.
 * Blockchain could be used to achieve and maintain integrity in peer to peer (P2P) systems. 
 
+For more financial benefits of Bitcoin: [Bitcoin Advantages](https://www.investopedia.com/ask/answers/100314/what-are-advantages-paying-bitcoin.asp#:~:text=Very%20Low%20Transaction%20Fees%20for,a%20major%20advantage%20for%20travelers)
+
 ## Is it secure?
- The blockchain is secure. This is due to the decentralized nature of the blockchain which would require one to take control  of more than 51% of computers in the same distributed ledger and be able to alter records within a very short time. This is about 10 minutes for a platform like Bitcoin. This has yet to happen as of this writing. [[2]](https://blogs.adb.org/blog/how-secure-blockchain)
+ The blockchain is secure. This is due to the decentralized nature of the blockchain. It would require one to take control  of more than 51% of the computers in the same distributed ledger and be able to alter records within a very short time. This is about 10 minutes for a platform like Bitcoin. This has yet to happen as of this writing. [[2]](https://blogs.adb.org/blog/how-secure-blockchain)
 ![Centralized vs Decentralized](https://www.bitdegree.org/tutorials/wp-content/uploads/2018/06/centralized-vs-decentralized-1-1.jpg)
-* The bigger the network, the more tamper-resistant it becomes. 
+The bigger the network, the more tamper-resistant it becomes. 
 
 ### Immutability
 Immutability is theoretically possible.Three elements to make the history of blockchain transactions data immutable:[[4]](https://learning.oreilly.com/library/view/blockchain-basics-a/9781484226049/A436689_1_En_16_Chapter.html)
@@ -26,35 +30,26 @@ Immutability is theoretically possible.Three elements to make the history of blo
 * Enforcing to rewrite the history for changes. 
 
 ## Security in the Blockchain
-**Hash Functions** and **Asymmetric cryptography** are technologies used extensively in the Blockchain.
+**Hash Functions**, **Asymmetric cryptography** and **Digital Signatures** are technologies used extensively in the Blockchain.
 
 ## What are Hash Functions?
 A function that maps an arbitrary size of data to a fixed-sized value. It is usually used so that passwords or keys are hashed and this hash value is stored rather than the password or key itself.
 
+There are many transactions in something like Bitcoin, the hash functions allows us to identify them uniquely and compare them quickly and easily.
 The Blockchain is concerned with cryptographic hash functions which have the following properties[[3]](https://www.amazon.com/Blockchain-Basics-Non-Technical-Introduction-Steps/dp/1484226038):
 * Provide hash values for any kind of data quick
 * Deterministic
     * Meaning the hash function will yield identical hashes for identical data. Hash(x) == Hash(x) all the time.
     
 * Pseudorandom
-    * Meaning that even if the input data were changed only a little bit, the resulting hash values will differ unpredictably.The objective is to deter others from predicting the hash value based on the input data.
+    * Meaning that even if the input data was slightly changed, the resulting hash values will differ unpredictably.The objective is to deter others from predicting the hash value based on the input data.
 * One-way function
     * Do not provide any way to trace its input values by its output.
 * Collision resistant 
     * meaning the chances of identical hash values for different data are small.
     
 ## What is Asymmetric cryptography  ?
-It is a type of cryptography that uses keys. All users get two keys:
-* One public key
-* One private key 
-
-Users exchange their public keys to communicate with each other. Any user can encrypt a message as long as they have the receiver's public key. The message however, can only be decrypted by the receiver's private key.
-The blockchain uses asymmetric cryptography to achieve two goals:
-* Identifying accounts (public keys)
-* Authorizing transactions
-
-In Symmetric cryptography, only one key is used to both encrypt and decrypt.
-
+Please refer to [Asymmetric cryptography](https://github.com/TheCountOfPeru/IT-Security-For-Dummies/blob/master/Basic%20Cryptography.md) within the Basic Cryptography file.
 ## Digital Signatures
 The blockchain needs to ensure that only the legitimate owner can tranfer his or her property to other accounts. 
 
@@ -69,7 +64,7 @@ The blockchain needs to ensure that only the legitimate owner can tranfer his or
 ![](https://cryptopurview.com/wp-content/uploads/2019/07/image-2.png)
 
 4. The receiver checks the hash value generated by the sender.
-    * The receiver feeds the sender's public key and the digital signature into the algorithm. It generates a hash value as output.
+    * After receiving the data and signature on it. The receiver feeds the sender's public key and the digital signature into an algorithm. It generates a hash value as output.
 
 5. Regenerate hash value from the data and match with hash sent by the sender
     * Receiver uses the same hash function and generates the hash value of the original data. If it matches with what the sender sent, the receiver gets assurance that the digital signature is valid. 
@@ -81,10 +76,16 @@ The activity of adding a new block to the blockchain is called mining.
 1. Block must contain a valid hash reference to a previous block.
 2. Block must contain a valid root of a Merkle tree containing transaction data
 3. Block must contain a correct difficulty level
+    * The difficulty of the hash puzzle will determine how much computational effort and therefore the time it will take to solve the puzzle. This will also determine the immutability of the blockchain structure. 
+        * Too low could encourage nodes to manipulate the history of the transaction
+        * Too high could discourage nodes from adding new transaction data. 
 4. Block's new time stamp is after the time stamp of its preceding block header
 5. Block must contain nonce. 
     * "A nonce is an arbitrary number that can be used just once in a cryptographic communication." [[5]](https://en.wikipedia.org/wiki/Cryptographic_nonce) 
 6. The hash value of all the five pieces of data combined together fulfills the difficulty level.
+
+What is a Merkle tree from the second step?
+It is a data structure that the blockchain uses. A tree in which every leaf node is labelled with the cryptographic hash of a data block, and every non-leaf node is labelled with the cryptographic hash of the labels of its child nodes.
 
 ## Limitations of the Blockchain
 
