@@ -45,6 +45,7 @@ A block cipher that stands for **Data Encryption Standard** which was proposed b
 **An Overview of how DES works**
 
 The encryption with DES starts by taking the key and permutating the bits of the key. In the image below, what was the 58th bit becomes the first bit, the 50th bit becomes the second and so on.
+![DES Initial Permutation](https://github.com/TheCountOfPeru/IT-Security-For-Dummies/blob/master/images/Initial-Permutation.png)
 
 ![DES IP](https://github.com/TheCountOfPeru/IT-Security-For-Dummies/blob/master/images/Initial-Permutation.png)
 
