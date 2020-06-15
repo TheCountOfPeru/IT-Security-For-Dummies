@@ -4,7 +4,7 @@
 
 Multi-factor authentication is an authentication method in which a computer user is granted access only after successfully presenting two or more pieces of evidence (or factors) to an authentication mechanism: knowledge (something the user and only the user knows), possession (something the user and only the user has), and inherence (something the user and only the user is).[1]
 
-## Two-factor authentication(2FA)
+### Two-factor authentication(2FA)
 
 Two-factor authentication is a typical type, or subset, of multi-factor authentication. It is a method of confirming users' claimed identities by using a combination of two different factors: 1) something they know, 2) something they have, or 3) something they are.
 
