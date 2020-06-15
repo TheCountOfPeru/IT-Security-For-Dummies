@@ -1,86 +1,71 @@
 #### [Back to table of contents](./README.md)
 
-# Browsing the internet securely: HTTP, HTTPS and TLS 
+# Browsing the internet securely: HTTP, HTTPS, and TLS 
 
-Recommended knowledge: basic cryptography, networking
-
-When you use an internet browser to visit your favourite websites data is being sent across the internet. How the data is being secured will be explained in this article.
+When you use an internet browser to visit your favorite websites data is being sent across the internet. How the data is being secured will be explained in this article.
 
 ## HTTP and HTTPS
-When you open an internet browser and navigate to your favourite website what is happening is your browser is requesting the websites server to send you the page of your requested website. To do this HTTP or Hyper Text Transfer Protocol is the protocol your browser follows when sending messages for requests. HTTP is the rules of what a request and response message looks like. As long as HTTP rules are followed your browsers and websites can communicate.
+When you open an internet browser and navigate to your favorite website what is happening in your browser is requesting the website's server to send you the page of your requested website. To do this HTTP or HyperText Transfer Protocol is the protocol your browser follows when sending messages for requests. HTTP is the rules of what a request and response message looks like. As long as HTTP rules are followed your browsers and websites can communicate.
 
-HTTP by itself does not have any sort of security built-in though. A hacker could eavesdrop on HTTP connections and/or change what is being sent and recieved. This is where HTTPS comes in and makes sure a hacker cannot do anything. This is the secure version of HTTP as denoted by the 'S'. The mechanism responsible for creating security is called TLS.
+HTTP by itself does not have any sort of security built-in though. A hacker could eavesdrop on HTTP connections and/or change what is being sent and received. This is where HTTPS comes in and makes sure a hacker cannot do anything. This is the secure version of HTTP as denoted by the 'S'. The mechanism responsible for creating security is called TLS.
 
 ## TLS
-TLS or Transport Layer Security is a protocol guarantees that data between client and servers has privacy and has integrity. Privacy refers to only those allowed can know what the data represents and integrity refers to being able to know if the data was changed in anyway. TLS has two layers: the TLS handshake protocol and the TLS record protocol.
+TLS or Transport Layer Security is a protocol that guarantees that data between client and servers have privacy and integrity. Privacy refers to only those allowed can know what the data represents and integrity refers to being able to know if the data was changed in any way. TLS has two layers: the TLS handshake protocol and the TLS record protocol.
 
 ### TLS handshake protocol
-The handshake is meant to authenticate a server with a client i.e. your internet browser so that you know you are connecting to a trusted website also initiates the security terms the two will communicate on. With HTTPS your browser initiates a handshake when connecting to a website. For this article we will be looking at the handshake of TLS 1.2 and TLS 1.3. The 1.3 handshake is more secure and faster then 1.2 but not everyone uses 1.3 yet. Below are the steps of the handshake.
+The handshake is meant to authenticate a server with a client i.e. your internet browser so that you know you are connecting to a trusted website and also initiates the security terms the two will communicate on. With HTTPS your browser initiates a handshake when connecting to a website. For this article, we will be looking at the handshake of TLS 1.2 and TLS 1.3. The 1.3 handshake is more secure and faster than 1.2 but not everyone uses 1.3 yet. Below are the steps of the handshake. Knowledge of [basic cryptography](https://github.com/TheCountOfPeru/IT-Security-For-Dummies/blob/master/Basic%20Cryptography.md) is recommended before continuing.
 
 #### TLS 1.2
-1. Client sends hello to the server. Hello's contain a random number and a list of protocols and cipher suites the sender knows.
-2. Server sends hello and its certificate to the client. Server picks the strongest protocol and the best cipher suite that both parties can use.
-3. Client sends a ClientKeyExchange, ChangeCipherSpec, and a finished message to the server. 
-4. Server sends a ChangeCipherSpec and finished messaged. 
-5. Both the client and server change to the cryptographic protocol picked by the server and regular HTTP traffic begins under that protocol.
+1. The client sends hello to the server. Hello contains a random number and a list of protocols and cipher suites the sender knows.
+2. The server sends hello and its certificate to the client. The server picks the strongest protocol and the best cipher suite that both parties can use. 
+3. The client inspects the certificate to make sure it is valid. If the certificate is not valid the handshake fails and quits. Otherwise, the client extracts the server's public key from the certificate and continues.
+4. The client now generates a special number called the pre-master secret and encrypts that with the server's public key.
+5. The client sends a ClientKeyExchange, ChangeCipherSpec, and a finished message to the server. The ClientKeyExchange contains the encrypted pre-master secret.
+6. The server decrypts the ClientKeyExchange to get the pre-master secret. Now both the client and server create the same master secret by using the pre-master secret and the random numbers from hello. From this master secret, new numbers are generated for the client and server. Each generates new pieces of data, a key, a MAC, and an IV (initialization vector). The IV is only generated if the cipher suite needs it. These pieces are for symmetric encryption of data being sent between client and server later.
+7. The server sends a ChangeCipherSpec and finished message. 
+8. Both the client and server change to the cryptographic protocol picked by the server. The master secret generated data is used with the protocol. Now the TLS record protocol begins.
 
 #### TLS 1.3
-1. Client sends hello and keyshare to server.  Hello's contain a random number and a list of protocols and cipher suites the sender knows.
-2. Server sends hello, keyshare, certificate, CertificateVerified and finished to the client.
-3. Both the client and server change to the cryptographic protocol picked by the server and regular HTTP traffic begins under that protocol.
+1. The client sends hello which contains a keyshare and a list of supported protocols to the server. The keyshare is generated to work with the protocol that the client is guessing the server will pick.
+2. The server sends a hello which contains keyshare, what protocol it says to use, a certificate, CertificateVerified, and finished message to the client.
+3. The client inspects the certificate to make sure it is valid. If the certificate is not valid the handshake fails and quits. Otherwise, the client continues.
+4. A shared secret key is generated by from the keyshare using a different algorithm than in TLS 1.2. That key is used to generate other secrets for the client and server to use for the encryption protocol the server chose.
+5. Both the client and server change to the cryptographic protocol picked by the server and now the TLS record protocol begins.
 
 ![tls handshake](https://github.com/TheCountOfPeru/IT-Security-For-Dummies/blob/master/images/tls12vstls13.png)
 source: https://calcomsoftware.com/wp-content/uploads/2019/03/tls12-vs-tls13-1024x549.png
 
-Let's breakdown what some of the terms used above mean.
-* The random number in the hello will be used to create new shared key for both the client and server to use after the handshake.
-* Protocols listed would include what version of TLS each support.
-* Cipher suites are the mathematical techniques for cryptography each party can use.
-* A certificate is piece of information that tells the client that this server can be trusted. Certificates are supposed to be from 3rd parties that the client can verify trust with.
-* ClientKeyExchange is another number from the client that is encrypted using a key from the certificate before being sent to the server. The server has a key to reveal the encrypted number. 
-* ChangeCipherKey tells the recipient to switch to the encryption decided upon by the server.
-* Both client and server send the finished message encrypted with the chosen encryption.
-  
-It should be noted that a new key called the session key is generated from the random numbers in hello and the ClientKeyExchange number. That key is the shared key for the encryption used for the finished message and HTTPS traffic later.
+Let's break down what some of the terms used above mean.
 
-* A keyshare is another random number used for generating the new shared key.
+* Protocols listed would include what version of TLS each supports.
+* Cipher suites are the mathematical techniques for cryptography each party can use.
+* A certificate is a piece of information that tells the client that this server can be trusted and they also contain a public key of the server. Certificates are supposed to be from 3rd parties that the client can verify trust with. Clients verify a certificate by comparing the information they have on trusted 3rd parties with the certificate. Like when a person is asked to provide their ID in the real world.
+* ChangeCipherSpec tells the recipient to switch to the encryption decided upon by the server.
+* CertificateVerified is where the server verifies the certificate sent by the client if one was sent. Not all clients have a certificate. Having a client certificate is more secure.
+* Both client and server send the finished message encrypted with the chosen encryption. It is the first message using the TLS record protocol.
 
 As illustrated by the graphic TLS 1.3 is faster than TLS 1.2.
 
-TLS 1.3 is more secure than TLS 1.2 because the allowed cipher suites was modified to disallow certain suites that have discovered to be weak and certain Diffie Hellman numbers were blacklisted. Also the handshake is verified to check if any message was tampered with.
+TLS 1.3 is more secure than TLS 1.2 because the allowed cipher suites were modified to disallow certain suites that have been discovered to be weak and certain Diffie Hellman numbers were blacklisted. Also, the handshake is verified to check if any message was tampered with.
 
 ### TLS record protocol
-The record protocol is for encrypting and authenticating data sent between client and server. The encryption used is chosen during the handshake. Authenticating is facilitated by MAC or Message Authentication Checksum. This means that when a message is ready to be sent a MAC is calculated on the message. Then the MAC and message is encrypted together with the checksum. Then the result is sent. When the result is recieved it decrypted then calculates the MAC and compares to MAC included with the message. If they match up the message is sent to the program who was meant to recieve it. The keys used for encrytion are from the handshake step. 
+The record protocol is for encrypting and authenticating data sent between client and server. This data would be HTTP messages. The encryption and keys were chosen during the handshake. Authenticating is facilitated by MAC or Message Authentication Checksum. This means that when a message is ready to be sent a MAC is calculated on the message. Then the MAC and message are encrypted together with the checksum. Then the result is sent. When the result is received it is decrypted then the MAC is calculated on the decrypted message and compared with the MAC included with the message. If they match up the message is sent to the program that was meant to receive it.
 
-## Attacks agaisnt HTTPS
-Actually decrypting a HTTPS connection is more trouble than it's worth. Instead tricking browsers to not to not use HTTPS is a much more feasible attack.
+## Attacks against HTTPS
+Decrypting an HTTPS connection is more trouble than it's worth. Instead tricking browsers to not use HTTPS is a much more feasible attack.
 
-First, websites can use various methods to move a client from a HTTP connection to HTTPS automatically. What an attacker needs to do is get in between that action.
+First, websites can use various methods to move a client from an HTTP connection to HTTPS automatically. What an attacker needs to do is get in between that action.
 
-A common attack is the where the attack is sitting between the messages of the client and server. Example steps are as follows:
+A common attack is where the attacker is sitting between the messages of the client and the server. This attack is shown as follows:
 
-1. The client sends a request for HTTP url and it goes through the attacker which sends the same request but as HTTPS to the server.
+1. The client sends a request for HTTP URL and it goes through the attacker which sends the same request but as HTTPS to the server.
 2. The server sends the HTTPS response to the attacker. The attacker modifies the response to HTTP and sends it to the client. 
 
-Now the client has a HTTP connection to the attacker even though it thinks it has connection with the server. And the server thinks it has a HTTPS connection to the client.
+Now the client has an HTTP connection to the attacker even though it thinks it has a connection with the server. And the server thinks it has an HTTPS connection to the client.
 
 There are two solutions to beat this.
-1. Force your browser to only use HTTPS. For example installing the HTTPS Everyone browser extension available for Chrome, Firefox, and Opera.
-2. Have a server implement HSTS or HTTP Strict Transport policy. This adds a header to all server replies saying that this page should only be accessed by HTTPS. A browser would see that and refuse to display the requested page if on a HTTP connection.
+1. Force your browser to only use HTTPS. For example installing the HTTPS Everywhere browser extension available for Chrome, Firefox, and Opera.
+2. Have a server implement HSTS or HTTP Strict Transport policy. This adds a header to all server replies saying that this page should only be accessed by HTTPS. A browser would see that and refuse to display the requested page if on an HTTP connection.
 
-## Further topics for reading
-* certificates 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+## Further reading
+* [Diffie Hellman Key Exchange](https://www.comparitech.com/blog/information-security/diffie-hellman-key-exchange/)
