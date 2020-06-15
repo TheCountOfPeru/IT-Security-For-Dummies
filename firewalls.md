@@ -1,24 +1,19 @@
+#### [Back](./README.md)
 
-Briefing on firewalls
+# Briefing on firewalls
 
-## Quick view:
+## Formal definition:
 
-main points:
 
-•	A firewall is a hardware or software system that prevents unauthorized access to or from a network.
+A firewall is simply a system designed to prevent unauthorized access to or from a private network. Firewalls can be implemented in both hardware and software, or a combination of both. Firewalls are frequently used to prevent unauthorized Internet users from accessing private networks connected to the Internet. All data entering or leaving the Intranet pass through the firewall, which examines each packet and blocks those that do not meet the specified security criteria.
 
-•	Two main types of firewalls: network layer and application layer
-
-•	Network layer firewalls make decisions based on the source address, destination address and ports in individual IP packets.
-
-•	Application layer firewalls generally are hosts running proxy servers, which permit no traffic directly between networks and perform elaborate logging and examination of traffic.
-
-## Introduction
 
 Generally, firewalls are considered as a protection against unauthorized interactive actions from the outside world. This stops those hackers from breaking into machines on your network. More complicated firewalls block access from the outside to the internal part, but permit users on the inside to communicate a little more freely with the outside.
 Firewalls is important also because it provides its users with an important logging and confirming function; this is very significant to the administrator to know what type/volume of traffic that has been processed through it. 
 
 
+
+## Categorization 
 
 In general, there are two types of firewalls:
 
@@ -30,10 +25,7 @@ In general, there are two types of firewalls:
 The difference is very subtle. The categorization depends on what mechanisms the firewall uses to go through from one protected network to another. The International Standards Organization (ISO) Open Systems Interconnect (OSI) model for networking defines seven levels, where each level provides services that higher levels depend on. It’s important to bear in mind that the lower-level the mechanism, the less secure the firewall is.
 
 
-## Formal definition:
-
-
-A firewall is simply a system designed to prevent unauthorized access to or from a private network. Firewalls can be implemented in both hardware and software, or a combination of both. Firewalls are frequently used to prevent unauthorized Internet users from accessing private networks connected to the Internet. All data entering or leaving the Intranet pass through the firewall, which examines each packet and blocks those that do not meet the specified security criteria.
+![PIC](http://www.expertsmind.com/CMSImages/255_Application%20Gateways%20-firewall.png)
 
 
 ## Network layer firewalls
@@ -48,5 +40,7 @@ An application layer firewall may influence performance and may make the firewal
 The future of firewalls in everyday use sits somewhere between both network layer firewalls and application layer firewalls. It is likely that network layer firewalls will become increasingly aware of the information going through them, and application layer firewalls will become more and more transparent. The end result will be kind of a fast packet-screening system that logs and checks data as it passes through.
 
 
+## Bibliography
 
+[1][ Mercury Webster Education on Firewalls](http://mercury.webster.edu/aleshunas/COSC%205130/Chapter-22.pdf)
 
