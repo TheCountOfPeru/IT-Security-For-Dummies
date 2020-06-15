@@ -44,7 +44,7 @@ A block cipher that stands for **Data Encryption Standard** which was proposed b
 
 The encryption with DES starts by taking the key and permutating the bits. 
 
-![DES Initial Permutation][]
+![DES Initial Permutation][https://github.com/TheCountOfPeru/IT-Security-For-Dummies/blob/master/images/Initial-Permutation.png]
 
 An encryption with DES consists of **16** major steps, called rounds. In all of the 16 rounds, a 48-bit round key "ki" is used. The 16 round keys are actually computed from the 56-bit key "k" by using another algorithm.
 
