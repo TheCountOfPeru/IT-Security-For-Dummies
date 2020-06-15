@@ -42,11 +42,15 @@ A block cipher that stands for **Data Encryption Standard** which was proposed b
 * It takes 64-bit plaintext messages
 * It outputs a 64-bit cryptogram. 
 
-The encryption with DES starts by taking the key and permutating the bits. 
+**An Overview of how DES works**
 
-![DES Initial Permutation][https://github.com/TheCountOfPeru/IT-Security-For-Dummies/blob/master/images/Initial-Permutation.png]
+The encryption with DES starts by taking the key and permutating the bits of the key. In the image below, what was the 58th bit becomes the first bit, the 50th bit becomes the second and so on.
 
-An encryption with DES consists of **16** major steps, called rounds. In all of the 16 rounds, a 48-bit round key "ki" is used. The 16 round keys are actually computed from the 56-bit key "k" by using another algorithm.
+![DES IP](https://github.com/TheCountOfPeru/IT-Security-For-Dummies/blob/master/images/Initial-Permutation.png)
+
+[Source](https://en.wikipedia.org/wiki/DES_supplementary_material)
+
+This permutation is then split into half. A left shift for both pieces is then performed and then the split pieces are placed back together in a special way. This is how we get our first subkey. It is important to note that of the 64 bits we started with, the subkey will contain 48 bits. DES consists of **16** steps, called rounds.
 
 The main disadvantage of DES is that it can be broken using brute-force search. However, 3DES, which applies the DES algorithm 3 times is considered secure. 
     
