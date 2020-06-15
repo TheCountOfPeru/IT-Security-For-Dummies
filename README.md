@@ -6,14 +6,10 @@ We think a handbook is a useful idea for the reason that it makes it easy for us
 
 Table of Contents
 
-* [Basic Cyptography](https://github.com/TheCountOfPeru/IT-Security-For-Dummies/blob/master/Basic%20Cryptography.md)
-
 * [Blockchain](https://github.com/TheCountOfPeru/IT-Security-For-Dummies/blob/master/Blockchain.md)
 
 * [Passwords](https://github.com/TheCountOfPeru/IT-Security-For-Dummies/blob/master/Passwords.md)
 
-* [Malware](https://github.com/TheCountOfPeru/IT-Security-For-Dummies/blob/master/Malware.md)
+* [Viruses](https://github.com/TheCountOfPeru/IT-Security-For-Dummies/blob/master/Viruses.md)
 
 * [Firewall](https://github.com/TheCountOfPeru/IT-Security-For-Dummies/blob/master/firewalls.md)
-
-* [HTTPS](https://github.com/TheCountOfPeru/IT-Security-For-Dummies/blob/master/https.md)
