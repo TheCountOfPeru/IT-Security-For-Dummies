@@ -14,4 +14,4 @@ Table of Contents
 
 * [Firewall](https://github.com/TheCountOfPeru/IT-Security-For-Dummies/blob/master/firewalls.md)
 
-* [Multi-factor authentication](https://github.com/TheCountOfPeru/IT-Security-For-Dummies/blob/master/multi_factor_authentication.md)
+* [Multi-factor authentication](https://github.com/TheCountOfPeru/IT-Security-For-Dummies/blob/master/Multi_factor_authentication.md)
