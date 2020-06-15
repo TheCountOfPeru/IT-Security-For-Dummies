@@ -8,6 +8,12 @@ Multi-factor authentication is an authentication method in which a computer user
 
 Two-factor authentication is a typical type, or subset, of multi-factor authentication. It is a method of confirming users' claimed identities by using a combination of two different factors: 1) something they know, 2) something they have, or 3) something they are.
 
+### Adaptive authentication
+
+This type of MFA takes context into account to flag logins that are out of the ordinary. When a person tries to authenticate in an unusual context, Adaptive MFA may tighten security by requesting additional credentials. For example, if a user is logging in from a cafe late at night—and this is not typical for that user—the MFA tool may require the user to enter a code texted to the user’s phone.
+
+[.](https://www.onelogin.com/assets/img/learn/adaptive-mfa.svg)
+
 
 ## How does MFA work?
 
