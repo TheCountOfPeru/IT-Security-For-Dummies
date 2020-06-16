@@ -81,7 +81,8 @@ The activity of adding a new block to the blockchain is called mining.
         * Too high could discourage nodes from adding new transaction data. 
 4. Block's new time stamp is after the time stamp of its preceding block header
 5. Block must contain nonce. 
-    * "A nonce is an arbitrary number that can be used just once in a cryptographic communication." [[5]](https://en.wikipedia.org/wiki/Cryptographic_nonce) 
+    * "A nonce is an arbitrary number that can be used just once in a cryptographic communication."
+
 6. The hash value of all the five pieces of data combined together fulfills the difficulty level.
 
 What is a Merkle tree from the second step?
@@ -91,6 +92,18 @@ It is a data structure that the blockchain uses. A tree in which every leaf node
 
 As soon as the private key is given to someone else, either by accident or due to data robbery, there is no more security for that account. In the same way that security keys protect houses and cars, or PINS protect debit and credit card, once those are stolen, the security is broken.
 
-The fact that it requires to solve a hash puzzle for every time a new block is added reduces the processing speed and limits scalability.[[6]](https://learning.oreilly.com/library/view/blockchain-basics-a/9781484226049/A436689_1_En_22_Chapter.html)
+The fact that it requires to solve a hash puzzle for every time a new block is added reduces the processing speed and limits scalability.[[5]](https://learning.oreilly.com/library/view/blockchain-basics-a/9781484226049/A436689_1_En_22_Chapter.html)
 
 High costs for things like electricity, physical time and the hardware required to solve blockchain puzzles.
+
+## Bibliography
+[[1.]](https://www.technologyreview.com/2018/04/23/143477/explainer-what-is-a-blockchain/) MIT Technology Review Editors. April 23, 2018. <em> Explainer: What is a blockchain?</em>. MIT Technology Review. Accessed on: May 28, 2020. [Online]. Available: https://www.technologyreview.com/2018/04/23/143477/explainer-what-is-a-blockchain
+
+[[2.]](https://blogs.adb.org/blog/how-secure-blockchain) Lotte Schou-Zibell, Nigel Phair. May 4, 2018. <em> How secure is blockchain?</em>
+Asian Development Blog. Accessed on: June 3, 2018. [Online]. Available: https://blogs.adb.org/blog/how-secure-blockchain
+
+[[3.]](https://learning.oreilly.com/library/view/blockchain-basics-a/9781484226049/) Daniel Drescher. March 2017. Blockchain Basics: A Non-Technical Introduction in 25 Steps. Apress. Chapter 9.
+
+[[4.]](https://learning.oreilly.com/library/view/blockchain-basics-a/9781484226049/) Daniel Drescher. March 2017. Blockchain Basics: A Non-Technical Introduction in 25 Steps. Apress. Chapter 15.
+
+[[5.]](https://learning.oreilly.com/library/view/blockchain-basics-a/9781484226049/) Daniel Drescher. March 2017. Blockchain Basics: A Non-Technical Introduction in 25 Steps. Apress. Chapter 22.
