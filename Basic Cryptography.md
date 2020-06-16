@@ -42,16 +42,24 @@ A block cipher that stands for **Data Encryption Standard** which was proposed b
 * It takes 64-bit plaintext messages
 * It outputs a 64-bit cryptogram. 
 
-**An Overview of how DES works**
+**A simplified overview of how DES works**
 
 The encryption with DES starts by taking the key and permutating the bits of the key. In the image below, what was the 58th bit becomes the first bit, the 50th bit becomes the second and so on.
-![DES Initial Permutation](https://github.com/TheCountOfPeru/IT-Security-For-Dummies/blob/master/images/Initial-Permutation.png)
 
 ![DES IP](https://github.com/TheCountOfPeru/IT-Security-For-Dummies/blob/master/images/Initial-Permutation.png)
 
 [Source](https://en.wikipedia.org/wiki/DES_supplementary_material)
 
-This permutation is then split into half. A left shift for both pieces is then performed and then the split pieces are placed back together in a special way. This is how we get our first subkey. It is important to note that of the 64 bits we started with, the subkey will contain 48 bits. DES consists of **16** steps, called rounds.
+This permutation is then split into half. A left shift for both halves is then performed and then the split pieces are placed back together in a special way. This is how we get our first **subkey**. It is important to note that of the 64 bits we started with, the subkey will contain 48 bits. DES consists of **16** steps, called rounds.
+
+![DES Structure](https://github.com/TheCountOfPeru/IT-Security-For-Dummies/blob/master/images/des_structure.jpg)
+
+The plaintext is now permuted and split into halves.
+
+    * The right half is padded so that we go from a 32 bit stream to a 48 bit stream.  
+    * Perform XOR with Subkey 1 since now both key and right side of plain-text are 48 bits.
+
+[Source](https://www.tutorialspoint.com/cryptography/data_encryption_standard.htm)
 
 The main disadvantage of DES is that it can be broken using brute-force search. However, 3DES, which applies the DES algorithm 3 times is considered secure. 
     
