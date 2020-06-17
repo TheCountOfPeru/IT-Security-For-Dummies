@@ -18,7 +18,7 @@ Symmetric encryption means that one key will be used for both encrypting and dec
 There are two notions to go about encrypting the plaintext in symmetric-key encryption. One is the notion of **stream cipher** which processes the plaintext bit by bit. The other is **block cipher** which converts plaintext into ciphertext by splitting the plaintext into blocks first, the size of the block could vary by algorithm, the DES algorithm splits it into 8 bytes (64 bits).
 
 A basic problem in a symmetric scheme is how Alice and Bob can agree on a shared secret key k in a secure and efficient way. 
-There were no solutions to the key exchange problem until public-key cryptography was discovered 44 years ago by Martin Hellman, Ralph Merkle and Whitfield Diffie.
+There were no solutions to the key exchange problem until public-key cryptography was discovered 44 years ago (1976) by Martin Hellman, Ralph Merkle and Whitfield Diffie.
 
 Some examples of symmetric-key encryption algorithms are:
 * Vernam's one-time pad
@@ -67,10 +67,12 @@ This permutation is then split into half. A left shift for both halves is then p
 
 4. Perform XOR with Subkey 1 since now, both key and right side of plain-text are 48 bits.
 
-5. The result is now implemented into the Substitution boxes "S-boxes", which there are eight for DES. 
+5. The result from step 4 is now implemented into the Substitution boxes "S-boxes", which there are eight of for DES. 
     * They take 6 bits at a time of the 48 bits, where the outer bits of the 6 bits are used for the row while the 4 inner bits are used for the column. 
 
 ![S-box 5](https://github.com/TheCountOfPeru/IT-Security-For-Dummies/blob/master/images/FifthS-Box.png)
+
+[Source](https://en.wikipedia.org/wiki/DES_supplementary_material)
 
 Substitution box 5 of the 8.
 
@@ -84,12 +86,23 @@ Substitution box 5 of the 8.
 10. This process must be repeated another 15 times for a total of 16 times.
 11. A Final Permutation (FP) is performed on the combined block which produces the 64-bit ciphertext.
 
-The main disadvantage of DES is that it can be broken using brute-force search. However, 3DES, which applies the DES algorithm 3 times is considered secure. 
+The main disadvantage of DES is that it can be broken using brute-force search. However, 3DES, which applies the DES algorithm 3 times is considered secure. The receiver would have the ciphertext and the key, which would allow him to get the plaintext.
     
 ### AES
-* Stands for Advanced Encryption Standard
-* Developed by J.Daeman and V.Rijmen. 
-* AES fixes block length to 128 bits, and uses three key lengths 128, 192 and 256 bits.
+Stands for Advanced Encryption Standard. It is another common block cipher. It was developed by two Belgian cryptographers; Vincent Rijmen and Joan Daeman. Some pointers:
+* It takes a plaintext in 128 bits
+* It outputs the ciphertext into 128 bits. 
+* The key, however, can be of three key lengths; 128, 192 and 256 bits.
+* Each round in AES is composed of: Byte Substitution, Mix Column and Key Addition.
+* Number of rounds depends on the key length
+    * 10 rounds for 128 bits
+    * 12 round for 192 bits
+    * 14 rounds for 256 bits
+* Structure is based on substitution-permutation network.
+* AES is the de facto world standard, it is more secure than DES.
+
+
+Further reading: [AES Wikipedia](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard)
 
 ## What is Asymmetric cryptography ?
 It is a type of cryptography that uses keys. All users get two keys:
@@ -97,12 +110,16 @@ It is a type of cryptography that uses keys. All users get two keys:
 * One public key
 * One private key
 
-Users exchange their public keys to communicate with each other. Any user can encrypt a message as long as they have the receiver's public key. The message however, can only be decrypted by the receiver's private key. The blockchain uses asymmetric cryptography to achieve two goals:
+Users exchange their public keys to communicate with each other. Any user can encrypt a message as long as they have the receiver's public key. The message however, can only be decrypted by the receiver's private key. This is different than Symmetric cryptography, where only one key is used to both encrypt and decrypt. The blockchain uses asymmetric cryptography to achieve two goals:
 
 * Identifying accounts (public keys)
 * Authorizing transactions
 
-In Symmetric cryptography, only one key is used to both encrypt and decrypt.
-
 ## Bibliography
 [[1.]](https://ucalgary-primo.hosted.exlibrisgroup.com/primo-explore/fulldisplay?docid=01UCALG_ALMA51645328230004336&context=L&vid=UCALGARY&lang=en_US&search_scope=ONLINE_ONLY&adaptor=Local%20Search%20Engine&isFrbr=true&tab=everything&query=any,contains,basic%20cryptography&offset=0)Hans Delfs and Helmut Knebl. 2007. Introduction to Cryptography Principles and Applications. Second Edition. Berlin, Heidelberg: Springer.
+
+[[2.]](https://www.youtube.com/watch?v=Sy0sXa73PZA) Ineapple. "DES Encryption by Hand", Youtube, August 26, 2017. Available: https://www.youtube.com/watch?v=Sy0sXa73PZA
+
+[[3.]](https://www.tutorialspoint.com/cryptography/data_encryption_standard.htm) Tutorialspoint. Data Encryption Standard. Accesed on: June 7, 2020. [Online]. Available: http://libraryguides.vu.edu.au/ieeereferencing/webbaseddocument
+
+[[4.]](https://www.geeksforgeeks.org/data-encryption-standard-des-set-1/) shubhamupadhyay. Data Encryption Standard | Set 1. geekforgeeks. Accessed on: June 16, 2020. Available: https://www.geeksforgeeks.org/data-encryption-standard-des-set-1/
