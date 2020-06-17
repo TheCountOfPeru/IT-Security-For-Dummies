@@ -5,6 +5,13 @@
 ## What is it?
 "A public, permanent, append-only distributed ledger."[[1]](https://www.technologyreview.com/2018/04/23/143477/explainer-what-is-a-blockchain/). The [Blockchain](https://en.wikipedia.org/wiki/Blockchain) is like a record or spreadsheet containing information about transactions. It is a series of linked data blocks, nothing can be erased from it but new blocks can be added.
 
+Some drawbacks with traditional ledgers: [2]
+* They can be lost, stolen or damaged
+* They may not depict reality (The person writting it must be someone of trust and integrity)
+* The ledger could have blank spaces left
+* It could always be modified or altered
+* It may contain errors or inconsistencies
+
 ## Why should I care?
 
 There is a huge potential for cost cutting by getting rid of middlemen (intermediaries) in different industries. This would lead to lower prices for us as consumers as well as higher efficiencies overall.
@@ -19,7 +26,7 @@ There is a huge potential for cost cutting by getting rid of middlemen (intermed
 For more financial benefits of Bitcoin: [Bitcoin Advantages](https://www.investopedia.com/ask/answers/100314/what-are-advantages-paying-bitcoin.asp#:~:text=Very%20Low%20Transaction%20Fees%20for,a%20major%20advantage%20for%20travelers)
 
 ## Is it secure?
- The blockchain is secure. This is due to the decentralized nature of the blockchain. It would require one to take control  of more than 51% of the computers in the same distributed ledger and be able to alter records within a very short time. This is about 10 minutes for a platform like Bitcoin. This has yet to happen as of this writing. [[2]](https://blogs.adb.org/blog/how-secure-blockchain)
+ The blockchain is secure. This is due to the decentralized nature of the blockchain. It would require one to take control  of more than 51% of the computers in the same distributed ledger and be able to alter records within a very short time. This is about 10 minutes for a platform like Bitcoin. This has yet to happen as of this writing. [[3]](https://blogs.adb.org/blog/how-secure-blockchain)
 ![Centralized vs Decentralized](https://www.bitdegree.org/tutorials/wp-content/uploads/2018/06/centralized-vs-decentralized-1-1.jpg)
 The bigger the network, the more tamper-resistant it becomes. 
 
@@ -36,7 +43,7 @@ Immutability is theoretically possible.Three elements to make the history of blo
 A function that maps an arbitrary size of data to a fixed-sized value. It is usually used so that passwords or keys are hashed and this hash value is stored rather than the password or key itself.
 
 There are many transactions in something like Bitcoin, the hash functions allows us to identify them uniquely and compare them quickly and easily.
-The Blockchain is concerned with cryptographic hash functions which have the following properties[[3]](https://www.amazon.com/Blockchain-Basics-Non-Technical-Introduction-Steps/dp/1484226038):
+The Blockchain is concerned with cryptographic hash functions which have the following properties[[5]](https://www.amazon.com/Blockchain-Basics-Non-Technical-Introduction-Steps/dp/1484226038):
 * Provide hash values for any kind of data quick
 * Deterministic
     * Meaning the hash function will yield identical hashes for identical data. Hash(x) == Hash(x) all the time.
@@ -92,18 +99,22 @@ It is a data structure that the blockchain uses. A tree in which every leaf node
 
 As soon as the private key is given to someone else, either by accident or due to data robbery, there is no more security for that account. In the same way that security keys protect houses and cars, or PINS protect debit and credit card, once those are stolen, the security is broken.
 
-The fact that it requires to solve a hash puzzle for every time a new block is added reduces the processing speed and limits scalability.[[5]](https://learning.oreilly.com/library/view/blockchain-basics-a/9781484226049/A436689_1_En_22_Chapter.html)
+The structure means that everyone must know everything therefore not suitable for those who would prefer more privacy.
+
+The fact that it requires to solve a hash puzzle for every time a new block is added reduces the processing speed and limits scalability.[[6]](https://learning.oreilly.com/library/view/blockchain-basics-a/9781484226049/A436689_1_En_22_Chapter.html)
 
 High costs for things like electricity, physical time and the hardware required to solve blockchain puzzles.
 
 ## Bibliography
+
 [[1.]](https://www.technologyreview.com/2018/04/23/143477/explainer-what-is-a-blockchain/) MIT Technology Review Editors. April 23, 2018. <em> Explainer: What is a blockchain?</em>. MIT Technology Review. Accessed on: May 28, 2020. [Online]. Available: https://www.technologyreview.com/2018/04/23/143477/explainer-what-is-a-blockchain
 
-[[2.]](https://blogs.adb.org/blog/how-secure-blockchain) Lotte Schou-Zibell, Nigel Phair. May 4, 2018. <em> How secure is blockchain?</em>
-Asian Development Blog. Accessed on: June 3, 2018. [Online]. Available: https://blogs.adb.org/blog/how-secure-blockchain
+[2] Ryan Henry. June 2020. Blockchain Basics PowerPoint. 
 
-[[3.]](https://learning.oreilly.com/library/view/blockchain-basics-a/9781484226049/) Daniel Drescher. March 2017. Blockchain Basics: A Non-Technical Introduction in 25 Steps. Apress. Chapter 9.
+[[3.]](https://blogs.adb.org/blog/how-secure-blockchain) Lotte Schou-Zibell, Nigel Phair. May 4, 2018. <em> How secure is blockchain?</em> Asian Development Blog. Accessed on: June 3, 2018. [Online]. Available: https://blogs.adb.org/blog/how-secure-blockchain
 
-[[4.]](https://learning.oreilly.com/library/view/blockchain-basics-a/9781484226049/) Daniel Drescher. March 2017. Blockchain Basics: A Non-Technical Introduction in 25 Steps. Apress. Chapter 15.
+[[4.]](https://learning.oreilly.com/library/view/blockchain-basics-a/9781484226049/) Daniel Drescher. March 2017. Blockchain Basics: A Non-Technical Introduction in 25 Steps. Apress. Chapter 9.
 
-[[5.]](https://learning.oreilly.com/library/view/blockchain-basics-a/9781484226049/) Daniel Drescher. March 2017. Blockchain Basics: A Non-Technical Introduction in 25 Steps. Apress. Chapter 22.
+[[5.]](https://learning.oreilly.com/library/view/blockchain-basics-a/9781484226049/) Daniel Drescher. March 2017. Blockchain Basics: A Non-Technical Introduction in 25 Steps. Apress. Chapter 15.
+
+[[6.]](https://learning.oreilly.com/library/view/blockchain-basics-a/9781484226049/) Daniel Drescher. March 2017. Blockchain Basics: A Non-Technical Introduction in 25 Steps. Apress. Chapter 22.
