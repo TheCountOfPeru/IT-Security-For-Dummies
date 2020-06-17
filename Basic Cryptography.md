@@ -25,7 +25,7 @@ Some examples of symmetric-key encryption algorithms are:
 * DES
 * AES
 
-### Vernam's one-time pad
+## Vernam's one-time pad
  This is the most famous example of a stream cipher. Encryption is achieved by performing a bitwise exclusive or (XOR) between m and k. Decryption is achieved by bitwise XOR between k and c.
  Four criteria that must be met for the encryption to work:
  1. The Key must be random
@@ -35,31 +35,54 @@ Some examples of symmetric-key encryption algorithms are:
 
 Some of the disadvantages are seen from the requirements, mainly having to create a random key and that it must be the length of "m". 
 The Vernam one-time pad ensures the confidentiality but fails to protect the message against modification.
-### DES
-A block cipher that stands for **Data Encryption Standard** which was proposed by IBM back in 1974.
+
+## DES
+A block cipher that stands for **Data Encryption Standard** which was proposed by International Business Machines Corporation (IBM) back in 1974.
 
 * The DES algorithm takes 56-bit keys. The keys are apparently each 64 bits long **but** every 8th key bit is ignored in the DES algorithm. Thus effectively "k" is 56 bits 
 * It takes 64-bit plaintext messages
 * It outputs a 64-bit cryptogram. 
 
+
+
 **A simplified overview of how DES works**
 
-The encryption with DES starts by taking the key and permutating the bits of the key. In the image below, what was the 58th bit becomes the first bit, the 50th bit becomes the second and so on.
+The encryption with DES starts by taking the key and permutating the bits of the key. 
+
+![DES Structure](https://github.com/TheCountOfPeru/IT-Security-For-Dummies/blob/master/images/des_structure.jpg)
+
+[Source](https://www.tutorialspoint.com/cryptography/data_encryption_standard.htm)
+
+This permutation is then split into half. A left shift for both halves is then performed and then the split pieces are placed back together in a special way. This is how we get our first **subkey**. It is important to note that of the 64 bits we started with, the subkey will contain 48 bits. DES consists of **16** steps, called rounds, therefore 16 subkeys will be made.
+
+1. The plaintext (64 bits) is permutated using the Initial Permutation (IP). In the image below, what was the 58th bit becomes the first bit, the 50th bit becomes the second and so on.
 
 ![DES IP](https://github.com/TheCountOfPeru/IT-Security-For-Dummies/blob/master/images/Initial-Permutation.png)
 
 [Source](https://en.wikipedia.org/wiki/DES_supplementary_material)
 
-This permutation is then split into half. A left shift for both halves is then performed and then the split pieces are placed back together in a special way. This is how we get our first **subkey**. It is important to note that of the 64 bits we started with, the subkey will contain 48 bits. DES consists of **16** steps, called rounds.
+2. The permutated plaintext is split into two blocks, l<sub>0</sub> and r<sub>0</sub>.
 
-![DES Structure](https://github.com/TheCountOfPeru/IT-Security-For-Dummies/blob/master/images/des_structure.jpg)
+3. The right half, r<sub>0</sub> , is padded so that we go from a 32 bit stream to a 48 bit stream. 
 
-The plaintext is now permuted and split into halves.
+4. Perform XOR with Subkey 1 since now, both key and right side of plain-text are 48 bits.
 
-    * The right half is padded so that we go from a 32 bit stream to a 48 bit stream.  
-    * Perform XOR with Subkey 1 since now both key and right side of plain-text are 48 bits.
+5. The result is now implemented into the Substitution boxes "S-boxes", which there are eight for DES. 
+    * They take 6 bits at a time of the 48 bits, where the outer bits of the 6 bits are used for the row while the 4 inner bits are used for the column. 
 
-[Source](https://www.tutorialspoint.com/cryptography/data_encryption_standard.htm)
+![S-box 5](https://github.com/TheCountOfPeru/IT-Security-For-Dummies/blob/master/images/FifthS-Box.png)
+
+Substitution box 5 of the 8.
+
+6. The S-Box gives us a new 4 bit output (a number from 0 to 15 in decimal). This makes our right half 32 bits again from the 48 bits we had.
+
+7. We then perform another permutation. Which re-arranges the positions of the bits.
+
+8. Recall that we are manipulating the right side, r<sub>0</sub>. The right side that went through the Substitution box now gets XORed with the left side, l<sub>0</sub>. 
+    * The result becomes our new right side for the second round, r<sub>1</sub>.
+9. The original right side, r<sub>0</sub> , becomes our new left side, l<sub>1</sub>. 
+10. This process must be repeated another 15 times for a total of 16 times.
+11. A Final Permutation (FP) is performed on the combined block which produces the 64-bit ciphertext.
 
 The main disadvantage of DES is that it can be broken using brute-force search. However, 3DES, which applies the DES algorithm 3 times is considered secure. 
     
