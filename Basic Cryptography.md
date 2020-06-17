@@ -80,7 +80,7 @@ Substitution box 5 of the 8. (Picture above)
 
 7. We then perform another permutation. Which re-arranges the positions of the bits.
 
-8. Recall that we are manipulating the right side, r<sub>0</sub>. The right side that went through the Substitution box now gets XORed with the left side, l<sub>0</sub>. 
+8. Recall that we are manipulating the right side, r<sub>0</sub>. This right side that went through the Substitution box now gets XORed with the left side, l<sub>0</sub>. 
     * The result becomes our new right side for the second round, r<sub>1</sub>.
 9. The original right side, r<sub>0</sub> , becomes our new left side, l<sub>1</sub>. 
 10. This process must be repeated another 15 times for a total of 16 times.
