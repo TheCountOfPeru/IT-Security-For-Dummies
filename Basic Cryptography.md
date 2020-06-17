@@ -93,7 +93,7 @@ Stands for Advanced Encryption Standard. It is another common block cipher. It w
 * It takes a plaintext in 128 bits
 * It outputs the ciphertext into 128 bits. 
 * The key, however, can be of three key lengths; 128, 192 and 256 bits.
-* Each round in AES is composed of: Byte Substitution, Mix Column and Key Addition.
+* Each round in AES is composed of: Byte Substitution, Shift Row, Mix Column and Key Addition.
 * Number of rounds depends on the key length
     * 10 rounds for 128 bits
     * 12 round for 192 bits
