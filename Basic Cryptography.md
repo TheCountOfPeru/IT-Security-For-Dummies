@@ -74,13 +74,13 @@ This permutation is then split into half. A left shift for both halves is then p
 
 [Source](https://en.wikipedia.org/wiki/DES_supplementary_material)
 
-Substitution box 5 of the 8.
+Substitution box 5 of the 8. (Picture above)
 
 6. The S-Box gives us a new 4 bit output (a number from 0 to 15 in decimal). This makes our right half 32 bits again from the 48 bits we had.
 
 7. We then perform another permutation. Which re-arranges the positions of the bits.
 
-8. Recall that we are manipulating the right side, r<sub>0</sub>. The right side that went through the Substitution box now gets XORed with the left side, l<sub>0</sub>. 
+8. Recall that we are manipulating the right side, r<sub>0</sub>. This right side that went through the Substitution box now gets XORed with the left side, l<sub>0</sub>. 
     * The result becomes our new right side for the second round, r<sub>1</sub>.
 9. The original right side, r<sub>0</sub> , becomes our new left side, l<sub>1</sub>. 
 10. This process must be repeated another 15 times for a total of 16 times.
@@ -93,7 +93,7 @@ Stands for Advanced Encryption Standard. It is another common block cipher. It w
 * It takes a plaintext in 128 bits
 * It outputs the ciphertext into 128 bits. 
 * The key, however, can be of three key lengths; 128, 192 and 256 bits.
-* Each round in AES is composed of: Byte Substitution, Mix Column and Key Addition.
+* Each round in AES is composed of: Byte Substitution, Shift Row, Mix Column and Key Addition.
 * Number of rounds depends on the key length
     * 10 rounds for 128 bits
     * 12 round for 192 bits

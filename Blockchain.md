@@ -28,6 +28,7 @@ For more financial benefits of Bitcoin: [Bitcoin Advantages](https://www.investo
 ## Is it secure?
  The blockchain is secure. This is due to the decentralized nature of the blockchain. It would require one to take control  of more than 51% of the computers in the same distributed ledger and be able to alter records within a very short time. This is about 10 minutes for a platform like Bitcoin. This has yet to happen as of this writing. [[3]](https://blogs.adb.org/blog/how-secure-blockchain)
 ![Centralized vs Decentralized](https://www.bitdegree.org/tutorials/wp-content/uploads/2018/06/centralized-vs-decentralized-1-1.jpg)
+
 The bigger the network, the more tamper-resistant it becomes. 
 
 ### Immutability
