@@ -74,7 +74,7 @@ This permutation is then split into half. A left shift for both halves is then p
 
 [Source](https://en.wikipedia.org/wiki/DES_supplementary_material)
 
-Substitution box 5 of the 8.
+Substitution box 5 of the 8. (Picture above)
 
 6. The S-Box gives us a new 4 bit output (a number from 0 to 15 in decimal). This makes our right half 32 bits again from the 48 bits we had.
 
