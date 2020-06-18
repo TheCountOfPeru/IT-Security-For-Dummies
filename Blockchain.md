@@ -7,14 +7,14 @@
 
 Some drawbacks with traditional ledgers: [2]
 * They can be lost, stolen or damaged
-* They may not depict reality (The person writting it must be someone of trust and integrity)
+* They may not depict reality (The person writing it must be someone of trust and integrity)
 * The ledger could have blank spaces left
 * It could always be modified or altered
 * It may contain errors or inconsistencies
 
 ## Why should I care?
 
-There is a huge potential for cost cutting by getting rid of middlemen (intermediaries) in different industries. This would lead to lower prices for us as consumers as well as higher efficiencies overall.
+There is a huge potential for cost-cutting by getting rid of middlemen (intermediaries) in different industries. This would lead to lower prices for us as consumers as well as higher efficiencies overall.
 * Blockchain has the potential to disrupt traditional financial institutions.
     * Transaction fees to transfer money between countries would be much lower and quicker.
 
@@ -32,34 +32,34 @@ For more financial benefits of Bitcoin: [Bitcoin Advantages](https://www.investo
 The bigger the network, the more tamper-resistant it becomes. 
 
 ### Immutability
-Immutability is theoretically possible.Three elements to make the history of blockchain transactions data immutable:[[4]](https://learning.oreilly.com/library/view/blockchain-basics-a/9781484226049/A436689_1_En_16_Chapter.html)
+Immutability is theoretically possible. Three elements to make the history of blockchain transactions data immutable:[[4]](https://learning.oreilly.com/library/view/blockchain-basics-a/9781484226049/A436689_1_En_16_Chapter.html)
 * Storing the data such that the slightest manipulation becomes noticeable and stands out.
 * Making the tampering of data computationally expensive
 * Enforcing to rewrite the history for changes. 
 
 ## Security in the Blockchain
-**Hash Functions**, **Asymmetric cryptography** and **Digital Signatures** are technologies used extensively in the Blockchain.
+**Hash Functions**, **Asymmetric cryptography**, and **Digital Signatures** are technologies used extensively in the Blockchain.
 
 ## What are Hash Functions?
 A function that maps an arbitrary size of data to a fixed-sized value. It is usually used so that passwords or keys are hashed and this hash value is stored rather than the password or key itself.
 
-There are many transactions in something like Bitcoin, the hash functions allows us to identify them uniquely and compare them quickly and easily.
+There are many transactions in something like Bitcoin, the hash functions allow us to identify them uniquely and compare them quickly and easily.
 The Blockchain is concerned with cryptographic hash functions which have the following properties[[5]](https://www.amazon.com/Blockchain-Basics-Non-Technical-Introduction-Steps/dp/1484226038):
 * Provide hash values for any kind of data quick
 * Deterministic
     * Meaning the hash function will yield identical hashes for identical data. Hash(x) == Hash(x) all the time.
     
 * Pseudorandom
-    * Meaning that even if the input data was slightly changed, the resulting hash values will differ unpredictably.The objective is to deter others from predicting the hash value based on the input data.
+    * Meaning that even if the input data was slightly changed, the resulting hash values will differ unpredictably. The objective is to deter others from predicting the hash value based on the input data.
 * One-way function
     * Do not provide any way to trace its input values by its output.
 * Collision resistant 
     * meaning the chances of identical hash values for different data are small.
     
-## What is Asymmetric cryptography  ?
+## What is Asymmetric cryptography?
 Please refer to [Asymmetric cryptography](https://github.com/TheCountOfPeru/IT-Security-For-Dummies/blob/master/Basic%20Cryptography.md) within the Basic Cryptography file.
 ## Digital Signatures
-The blockchain needs to ensure that only the legitimate owner can tranfer his or her property to other accounts. 
+The blockchain needs to ensure that only the legitimate owner can transfer his or her property to other accounts. 
 
 ### The Process of how digital signature works:
 
@@ -75,7 +75,7 @@ The blockchain needs to ensure that only the legitimate owner can tranfer his or
     * After receiving the data and signature on it. The receiver feeds the sender's public key and the digital signature into an algorithm. It generates a hash value as output.
 
 5. Regenerate hash value from the data and match with hash sent by the sender
-    * Receiver uses the same hash function and generates the hash value of the original data. If it matches with what the sender sent, the receiver gets assurance that the digital signature is valid. 
+    * The receiver uses the same hash function and generates the hash value of the original data. If it matches with what the sender sent, the receiver gets an assurance that the digital signature is valid. 
 
 Source: [cryptopurview](https://cryptopurview.com/how-digital-signature-work-and-use-in-blockchain/)
 
@@ -87,14 +87,14 @@ The activity of adding a new block to the blockchain is called mining.
     * The difficulty of the hash puzzle will determine how much computational effort and therefore the time it will take to solve the puzzle. This will also determine the immutability of the blockchain structure. 
         * Too low could encourage nodes to manipulate the history of the transaction
         * Too high could discourage nodes from adding new transaction data. 
-4. Block's new time stamp is after the time stamp of its preceding block header
+4. Block's new timestamp is after the timestamp of its preceding block header
 5. Block must contain nonce. 
     * "A nonce is an arbitrary number that can be used just once in a cryptographic communication."
 
 6. The hash value of all the five pieces of data combined together fulfills the difficulty level.
 
 What is a Merkle tree from the second step?
-It is a data structure that the blockchain uses. A tree in which every leaf node is labelled with the cryptographic hash of a data block, and every non-leaf node is labelled with the cryptographic hash of the labels of its child nodes.
+It is a data structure that the blockchain uses. A tree in which every leaf node is labelled with the cryptographic hash of a data block and every non-leaf node is labelled with the cryptographic hash of the labels of its child nodes.
 
 ## Limitations of the Blockchain
 
@@ -104,7 +104,7 @@ The structure means that everyone must know everything therefore not suitable fo
 
 The fact that it requires to solve a hash puzzle for every time a new block is added reduces the processing speed and limits scalability.[[6]](https://learning.oreilly.com/library/view/blockchain-basics-a/9781484226049/A436689_1_En_22_Chapter.html)
 
-High costs for things like electricity, physical time and the hardware required to solve blockchain puzzles.
+High costs for things like electricity, physical time, and the hardware required to solve blockchain puzzles.
 
 ## Bibliography
 
