@@ -13,7 +13,7 @@ Table of Contents
 
 * [Passwords](https://github.com/TheCountOfPeru/IT-Security-For-Dummies/blob/master/Passwords.md)
 
-* [Tor and Dark Web](https://github.com/TheCountOfPeru/IT-Security-For-Dummies/blob/master/Tor%20and%20Dark%20Web.md)
+* [Tor](https://github.com/TheCountOfPeru/IT-Security-For-Dummies/blob/master/Tor.md)
 
 * [Firewall](https://github.com/TheCountOfPeru/IT-Security-For-Dummies/blob/master/firewalls.md)
 
