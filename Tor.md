@@ -40,9 +40,9 @@ With this routing you can still access the regular web, however you will be far 
 ## Bibliography
 [[1]](https://metrics.torproject.org/glossary.html) “Glossary,” *Tor Metrics*. [Online]. Available: https://metrics.torproject.org/glossary.html. [Accessed: 18-Jun-2020].
 
-[[2]](https://www.extremetech.com/internet/245086-deep-dive-dark-web-how-to-use) 2017 at 11:15 am C. Jessica Hall on March 1, “ExtremeTech explains: All about the dark web, and how to use it,” *ExtremeTech*, 01-Mar-2017. [Online]. Available: https://www.extremetech.com/internet/245086-deep-dive-dark-web-how-to-use. [Accessed: 18-Jun-2020].
+[[2]](https://www.extremetech.com/internet/245086-deep-dive-dark-web-how-to-use) 2017 at 11:15 am C. Jessica Hall on March 1, “ExtremeTech explains: All about the dark web, and how to use it,” *ExtremeTech*, 01-Mar-2017. [Online]. Available: https://www.extremetech.com/internet/245086-deep-dive-dark-web-how-to-use. [Accessed: 16-Jun-2020].
 
-[[3]](https://trac.torproject.org/projects/tor/wiki/TorRelayGuide) “Tor Relay Guide,” *The Tor Project*. [Online]. Available: https://trac.torproject.org/projects/tor/wiki/TorRelayGuide. [Accessed: 18-Jun-2020].
+[[3]](https://trac.torproject.org/projects/tor/wiki/TorRelayGuide) “Tor Relay Guide,” *The Tor Project*. [Online]. Available: https://trac.torproject.org/projects/tor/wiki/TorRelayGuide. [Accessed: 16-Jun-2020].
 
 
 ## Further Readings

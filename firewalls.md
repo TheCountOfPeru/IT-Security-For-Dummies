@@ -44,7 +44,7 @@ An application firewall is a form of firewall that controls input, output, and/o
 
 ## Bibliography
 
-[1] [Wikipedia](https://en.wikipedia.org/wiki/Firewall_(computing)#:~:text=In%20computing%2C%20a%20firewall%20is,network%2C%20such%20as%20the%20Internet)
+[[1]](https://en.wikipedia.org/wiki/Firewall_(computing)#:~:text=In%20computing%2C%20a%20firewall%20is,network%2C%20such%20as%20the%20Internet)“Firewall (computing),” *Wikipedia*, 03-Jun-2020. [Online]. Available: https://en.wikipedia.org/wiki/Firewall_(computing). [Accessed: 11-Jun-2020].
 
-[2] [What is firewall? -Cisco](https://www.cisco.com/c/en_ca/products/security/firewalls/what-is-a-firewall.html)
+[[2]](https://www.cisco.com/c/en_ca/products/security/firewalls/what-is-a-firewall.html) “What Is a Firewall?,” *Cisco*, 08-Apr-2020. [Online]. Available: https://www.cisco.com/c/en_ca/products/security/firewalls/what-is-a-firewall.html. [Accessed: 11-Jun-2020].
 

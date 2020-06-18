@@ -44,6 +44,6 @@ Application of MFA on mobile devices includes push-based authentication, QR code
 
 ## Bibliography
 
-[1]  [Two-factor authentication: What you need to know (FAQ) – CNET]( https://www.cnet.com/news/two-factor-authentication-what-you-need-to-know-faq/)
+[[1]](https://www.cnet.com/news/two-factor-authentication-what-you-need-to-know-faq/) S. Rosenblatt, “Two-factor authentication: What you need to know (FAQ),” *CNET*, 15-Jun-2015. [Online]. Available: https://www.cnet.com/news/two-factor-authentication-what-you-need-to-know-faq/. [Accessed: 15-Jun-2020].
 
-[2] [Attackers breached the servers of RSA and stole information that could be used to compromise the security of two-factor authentication tokens used by 40 million employees (register.com, 18 Mar 2011)](https://www.theregister.com/2011/03/18/rsa_breach_leaks_securid_data/)
+[[2]](https://www.theregister.com/2011/03/18/rsa_breach_leaks_securid_data/) Goodin, D. (2011, March 18). RSA breach leaks data for hacking SecurID tokens. Retrieved June 15, 2020, from https://www.theregister.com/2011/03/18/rsa_breach_leaks_securid_data/
