@@ -6,9 +6,11 @@ When it comes to privacy, no part of the internet takes it more seriously than t
 Standard web browsers are made to use DNS indexing to get access to a website. DNS indexing is what converts a website name to an IP address which your device can use to access the website, for example, if you were to type into your address bar '[Google.com](https://www.google.com)', it would direct you to the Google website. Then if you were to type into your address bar, '[216.58.217.46](http://216.58.217.46/)', it would also direct you to the Google website. This is because devices use IP addresses to find websites, they do not use human-readable names. Dark websites do not participate in DNS indexing, therefore it is impossible to access a dark website from your standard browsers, and can not be found by standard search engines[2]. To access a dark website, you need the right encryption and your web traffic needs to take a certain path to anonymize your connection. They use onion routing in selecting their paths.
 
 ## How Onion Routing works
-<p style="text-align: center; margin-bottom:0"><image src=./images/tor1.png> </image> <image src=./images/tor2.png> </image> <image src=./images/tor3.png> </image></p>
+<p style="text-align: center; margin-bottom:0; padding-bottom:0;"><image src=./images/tor1.png> </image> <image src=./images/tor2.png> </image> <image src=./images/tor3.png> </image></p>
 
-<div style="text-align:center; margin-top:0"><sub style="text-align:center;"> Images retrieved from: <a src =https://2019.www.torproject.org/about/overview.html.en> https://2019.www.torproject.org/about/overview.html.en</a> </sub> </div>
+<div style="text-align:center; margin:auto; width:100%;"><sub style="text-align:center;"> Images retrieved from: <a src =https://2019.www.torproject.org/about/overview.html.en> https://2019.www.torproject.org/about/overview.html.en</a> </sub> </div>
+
+
 
 When typing in a web address into the Tor browser, several steps occur before you get the website back. 
 
