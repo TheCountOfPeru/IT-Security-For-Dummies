@@ -40,5 +40,7 @@ An application firewall is a form of firewall that controls input, output, and/o
  This is done by examining information passed through system calls instead of or in addition to a network stack. A host-based application firewall can only provide protection to the applications running on the same host.
 
 
+## Bibliography
 
+[1] [Wikipedia](https://en.wikipedia.org/wiki/Firewall_(computing)#:~:text=In%20computing%2C%20a%20firewall%20is,network%2C%20such%20as%20the%20Internet)
 
