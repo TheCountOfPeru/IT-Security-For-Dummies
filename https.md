@@ -12,7 +12,7 @@ HTTP by itself does not have any sort of security built-in though. A hacker coul
 ## TLS
 TLS or Transport Layer Security is a protocol that guarantees that data between client and servers have privacy and integrity. Privacy refers to only those allowed can know what the data represents and integrity refers to being able to know if the data was changed in any way. TLS has two layers: the TLS handshake protocol and the TLS record protocol.
 
-### TLS handshake protocol
+### TLS handshake protocol[1]
 The handshake is meant to authenticate a server with a client i.e. your internet browser so that you know you are connecting to a trusted website and also initiates the security terms the two will communicate on. With HTTPS your browser initiates a handshake when connecting to a website. For this article, we will be looking at the handshake of TLS 1.2 and TLS 1.3. The 1.3 handshake is more secure and faster than 1.2 but not everyone uses 1.3 yet. Below are the steps of the handshake. Knowledge of [basic cryptography](https://github.com/TheCountOfPeru/IT-Security-For-Dummies/blob/master/Basic%20Cryptography.md) is recommended before continuing.
 
 #### TLS 1.2
@@ -25,7 +25,7 @@ The handshake is meant to authenticate a server with a client i.e. your internet
 7. The server sends a ChangeCipherSpec and finished message. 
 8. Both the client and server change to the cryptographic protocol picked by the server. The master secret generated data is used with the protocol. Now the TLS record protocol begins.
 
-#### TLS 1.3
+#### TLS 1.3[2]
 1. The client sends hello which contains a keyshare and a list of supported protocols to the server. The keyshare is generated to work with the protocol that the client is guessing the server will pick.
 2. The server sends a hello which contains keyshare, what protocol it says to use, a certificate, CertificateVerified, and finished message to the client.
 3. The client inspects the certificate to make sure it is valid. If the certificate is not valid the handshake fails and quits. Otherwise, the client continues.
@@ -69,3 +69,8 @@ There are two solutions to beat this.
 
 ## Further reading
 * [Diffie Hellman Key Exchange](https://www.comparitech.com/blog/information-security/diffie-hellman-key-exchange/)
+
+## Bibliography
+[1]2020. [Online]. Available: https://www.cloudflare.com/learning/ssl/what-happens-in-a-tls-handshake/. [Accessed: 18- Jun- 2020].
+
+[2]"The Illustrated TLS 1.3 Connection: Every Byte Explained", Tls13.ulfheim.net, 2020. [Online]. Available: https://tls13.ulfheim.net/. [Accessed: 18- Jun- 2020].

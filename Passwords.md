@@ -14,7 +14,7 @@ Passwords are good because they are easy to remember and it is very commonly use
 Passwords are bad because a lot of people do not use strong passwords or they reuse passwords. When it comes to making passwords most people aren't good at it. Also, it can be easy to steal a password from keyloggers or even looking over a person's shoulder.
 
 ## Guidelines for password use
-These guidelines are from NIST and are useful for users and administrators of any place requiring passwords. Some guidelines come with an in-depth explanation. You can compare these to your favorite websites to see how secure they are with passwords.
+These guidelines are from NIST and are useful for users and administrators of any place requiring passwords[1]. Some guidelines come with an in-depth explanation. You can compare these to your favorite websites to see how secure they are with passwords.
 
 ### NIST 2019 Password Guidelines
 1. No complexity requirements. 
@@ -64,12 +64,18 @@ The ways to store a password range from the very weak to the extremely strong. T
 #### Encryption 
 Encryption can be thought of as locks and keys. For example, Alice wants to give something to Bob and make sure nobody else can see what Bob got. She can put her item in a box and lock it. That would be encryption. Bob would receive it and unlock it. That is decryption. 
 
+![encryption](https://github.com/TheCountOfPeru/IT-Security-For-Dummies/blob/master/images/asymmetric_encryption_diagram.png)
+source: https://www.howtogeek.com/wp-content/uploads/2010/11/asymmetric_encryption_diagram.png
+
 In reality, the key would be a string of characters like "9jpivs#" and encryption would be using that key to scramble whatever data you want to protect. So looking at encrypted data would not reveal anything of the actual data.
 
 So if the hackers obtain the key and the database then all passwords are compromised.
 
 #### Hashing
 Hashing is similar to encryption except when you scramble the data there is no you can undo it. It's a one-way operation.
+
+![hashing](https://github.com/TheCountOfPeru/IT-Security-For-Dummies/blob/master/images/hashing.webp)
+source: https://dby250rdnxby3.cloudfront.net/wp-content/uploads/2012/09/Find-out-whether-a-website-hashes-your-password-or-not-Security-Tips.webp
 
 So a database will store the hashed password. Every time someone tries to login the password they input is hashed. If it matches one in the database they are let in.
 
@@ -88,4 +94,10 @@ If you make a website with user accounts you should at least salt your passwords
 ## Password Tips
 As strong passwords are annoying to make and remember a good solution is a password manager. A password manager can generate strong passwords and remembers them all for you. Of course, a downside is the password manager is the single point of failure if it is compromised.
 A strong password is still not enough to protect yourself though. This is why using another authentication method with passwords is highly recommended. One common option is using a one-time pass program that sends a code to your phone and you'll need to enter that code alongside your password to access your account.
+
+## Further reading
+[Multi-factor authentication(MFA)](https://github.com/TheCountOfPeru/IT-Security-For-Dummies/blob/master/Multi_factor_authentication.md)
+
+## Bibliography
+[1]R. Doherty, "2019 Password Policy Best Practices", Intellisuite.com, 2020. [Online]. Available: https://www.intellisuite.com/blog/2019-password-policy-best-practices. [Accessed: 18- Jun- 2020].
 
