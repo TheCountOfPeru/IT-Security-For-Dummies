@@ -6,8 +6,8 @@ Cryptography is the branch of science concerned with keeping secrets secret. Cry
 
 * The message that is to be transmitted is called plaintext which will be referred to as "m". It may be in the form of text, digit, executable program or any other type. This is what we wish to protect from others accessing it. [[1]](https://ucalgary-primo.hosted.exlibrisgroup.com/primo-explore/fulldisplay?docid=01UCALG_ALMA51645328230004336&context=L&vid=UCALGARY&lang=en_US&search_scope=ONLINE_ONLY&adaptor=Local%20Search%20Engine&isFrbr=true&tab=everything&query=any,contains,basic%20cryptography&offset=0)
 
-* The key will be referred as "k". It will be used to encrypt the plaintext.
-* Ciphertext which is the result of the plaintext being encrypted will be referred as "c"
+* The key will be referred to as "k". It will be used to encrypt the plaintext.
+* Ciphertext which is the result of the plaintext being encrypted will be referred to as "c"
 
 ## Symmetric-Key Encryption
 Symmetric encryption means that one key will be used for both encrypting and decrypting. Alice and Bob first agree on a key k. They both keep this key secret.
@@ -17,8 +17,8 @@ Symmetric encryption means that one key will be used for both encrypting and dec
 
 There are two notions to go about encrypting the plaintext in symmetric-key encryption. One is the notion of **stream cipher** which processes the plaintext bit by bit. The other is **block cipher** which converts plaintext into ciphertext by splitting the plaintext into blocks first, the size of the block could vary by algorithm, the DES algorithm splits it into 8 bytes (64 bits).
 
-A basic problem in a symmetric scheme is how Alice and Bob can agree on a shared secret key k in a secure and efficient way. 
-There were no solutions to the key exchange problem until public-key cryptography was discovered 44 years ago (1976) by Martin Hellman, Ralph Merkle and Whitfield Diffie.
+A basic problem in a symmetric scheme is how Alice and Bob can agree on a shared secret key k securely and efficiently. 
+There were no solutions to the key exchange problem until public-key cryptography was discovered 44 years ago (1976) by Martin Hellman, Ralph Merkle, and Whitfield Diffie.
 
 Some examples of symmetric-key encryption algorithms are:
 * Vernam's one-time pad
@@ -28,18 +28,18 @@ Some examples of symmetric-key encryption algorithms are:
 ## Vernam's one-time pad
  This is the most famous example of a stream cipher. Encryption is achieved by performing a bitwise exclusive or (XOR) between m and k. Decryption is achieved by bitwise XOR between k and c.
  Four criteria that must be met for the encryption to work:
- 1. The Key must be random
- 2. The Key must be as long as the plaintext
- 3. The Key must never be re-used in whole or in part
+ 1. The key must be random
+ 2. The key must be as long as the plaintext
+ 3. The key must never be re-used in whole or in part
  4. The key must be kept completely secret  
 
 Some of the disadvantages are seen from the requirements, mainly having to create a random key and that it must be the length of "m". 
-The Vernam one-time pad ensures the confidentiality but fails to protect the message against modification.
+The Vernam one-time pad ensures confidentiality but fails to protect the message against modification.
 
 ## DES
 A block cipher that stands for **Data Encryption Standard** which was proposed by International Business Machines Corporation (IBM) back in 1974.
 
-* The DES algorithm takes 56-bit keys. The keys are apparently each 64 bits long **but** every 8th key bit is ignored in the DES algorithm. Thus effectively "k" is 56 bits 
+* The DES algorithm takes 56-bit keys. The keys are each 64 bits long **but** every 8th key bit is ignored in the DES algorithm. Thus effectively "k" is 56 bits 
 * It takes 64-bit plaintext messages
 * It outputs a 64-bit cryptogram. 
 
@@ -55,7 +55,7 @@ The encryption with DES starts by taking the key and permutating the bits of the
 
 This permutation is then split into half. A left shift for both halves is then performed and then the split pieces are placed back together in a special way. This is how we get our first **subkey**. It is important to note that of the 64 bits we started with, the subkey will contain 48 bits. DES consists of **16** steps, called rounds, therefore 16 subkeys will be made.
 
-1. The plaintext (64 bits) is permutated using the Initial Permutation (IP). In the image below, what was the 58th bit becomes the first bit, the 50th bit becomes the second and so on.
+1. The plaintext (64 bits) is permutated using the Initial Permutation (IP). In the image below, what was the 58th bit becomes the first bit, the 50th bit becomes the second, and so on.
 
 ![DES IP](https://github.com/TheCountOfPeru/IT-Security-For-Dummies/blob/master/images/Initial-Permutation.png)
 
@@ -76,7 +76,7 @@ This permutation is then split into half. A left shift for both halves is then p
 
 Substitution box 5 of the 8. (Picture above)
 
-6. The S-Box gives us a new 4 bit output (a number from 0 to 15 in decimal). This makes our right half 32 bits again from the 48 bits we had.
+6. The S-Box gives us a new 4-bit output (a number from 0 to 15 in decimal). This makes our right half 32 bits again from the 48 bits we had.
 
 7. We then perform another permutation. Which re-arranges the positions of the bits.
 
@@ -92,8 +92,8 @@ The main disadvantage of DES is that it can be broken using brute-force search. 
 Stands for Advanced Encryption Standard. It is another common block cipher. It was developed by two Belgian cryptographers; Vincent Rijmen and Joan Daeman. Some pointers:
 * It takes a plaintext in 128 bits
 * It outputs the ciphertext into 128 bits. 
-* The key, however, can be of three key lengths; 128, 192 and 256 bits.
-* Each round in AES is composed of: Byte Substitution, Shift Row, Mix Column and Key Addition.
+* The key, however, can be of three key lengths; 128, 192, and 256 bits.
+* Each round in AES is composed of: Byte Substitution, Shift Row, Mix Column, and Key Addition.
 * Number of rounds depends on the key length
     * 10 rounds for 128 bits
     * 12 round for 192 bits
@@ -104,13 +104,13 @@ Stands for Advanced Encryption Standard. It is another common block cipher. It w
 
 Further reading: [AES Wikipedia](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard)
 
-## What is Asymmetric cryptography ?
+## What is Asymmetric cryptography?
 It is a type of cryptography that uses keys. All users get two keys:
 
 * One public key
 * One private key
 
-Users exchange their public keys to communicate with each other. Any user can encrypt a message as long as they have the receiver's public key. The message however, can only be decrypted by the receiver's private key. This is different than Symmetric cryptography, where only one key is used to both encrypt and decrypt. The blockchain uses asymmetric cryptography to achieve two goals:
+Users exchange their public keys to communicate with each other. Any user can encrypt a message as long as they have the receiver's public key. The message, however can only be decrypted by the receiver's private key. This is different than Symmetric cryptography, where only one key is used to both encrypt and decrypt. The blockchain uses asymmetric cryptography to achieve two goals:
 
 * Identifying accounts (public keys)
 * Authorizing transactions
