@@ -10,7 +10,7 @@ Standard web browsers are made to use DNS indexing to get access to a website. D
 
 
 <sub style="text-align:center;"> Images retrieved from: <a src =https://2019.www.torproject.org/about/overview.html.en> https://2019.www.torproject.org/about/overview.html.en</a> </sub>
-</br></br>
+</br></br></br>
 When typing in a web address into the Tor browser, several steps occur before you get the website back. 
 
 
